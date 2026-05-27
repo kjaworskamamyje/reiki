@@ -1287,6 +1287,124 @@ button, input, textarea, select {
   .instagram-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
+/* ── Booking Widget ── */
+.booking-wizard { max-width: 680px; margin: 0 auto; }
+
+.bk-steps { display: flex; align-items: flex-start; margin-bottom: 48px; }
+.bk-step-label { display: flex; flex-direction: column; align-items: center; gap: 6px; flex: 1; }
+.bk-step-num {
+  width: 32px; height: 32px; border-radius: 50%;
+  border: 1px solid var(--color-border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.78rem; color: var(--color-text-light);
+  background: var(--color-bg); transition: all 0.3s; position: relative; z-index: 1;
+}
+.bk-step-txt { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-light); transition: color 0.3s; }
+.bk-connector { flex: 1; height: 1px; background: var(--color-border); margin-top: 16px; }
+.bk-step-label.active .bk-step-num { border-color: var(--color-accent); background: var(--color-accent); color: #fff; }
+.bk-step-label.active .bk-step-txt { color: var(--color-accent); }
+.bk-step-label.done .bk-step-num { border-color: var(--color-accent); background: var(--color-accent); color: #fff; }
+.bk-step-label.done .bk-step-txt { color: var(--color-accent); }
+
+.bk-panel { animation: bkFade 0.3s ease; }
+.bk-panel.hidden { display: none; }
+@keyframes bkFade { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+
+.bk-summary {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  padding: 10px 16px; margin-bottom: 24px;
+  background: rgba(92,122,98,0.06); border: 1px solid rgba(92,122,98,0.18);
+  font-size: 0.82rem; color: var(--color-text-light);
+}
+.bk-summary strong { color: var(--color-accent); font-weight: 400; }
+.bk-summary-dot { color: var(--color-border); }
+
+.bk-service-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; margin-bottom: 32px; }
+.bk-service-card {
+  border: 1px solid var(--color-border); padding: 22px 16px;
+  cursor: pointer; transition: all 0.2s; text-align: center; background: var(--color-bg);
+}
+.bk-service-card:hover { border-color: var(--color-accent); }
+.bk-service-card.selected { border-color: var(--color-accent); background: rgba(92,122,98,0.04); }
+.bk-sc-type { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 6px; }
+.bk-sc-name { font-family: 'Cormorant Garamond',serif; font-size: 1.1rem; font-style: italic; color: var(--color-text); margin-bottom: 6px; }
+.bk-sc-dur { font-size: 0.76rem; color: var(--color-text-light); margin-bottom: 10px; }
+.bk-sc-price { font-family: 'Cormorant Garamond',serif; font-size: 1.8rem; color: var(--color-gold); font-weight: 300; line-height: 1; }
+.bk-sc-price span { font-size: 0.85rem; }
+
+.bk-cal { border: 1px solid var(--color-border); padding: 24px; margin-bottom: 28px; }
+.bk-cal-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+.bk-cal-month { font-family: 'Cormorant Garamond',serif; font-size: 1.25rem; font-style: italic; }
+.bk-cal-nav {
+  width: 30px; height: 30px; border: 1px solid var(--color-border);
+  background: none; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  color: var(--color-text-light); transition: all 0.2s;
+}
+.bk-cal-nav:hover:not(:disabled) { border-color: var(--color-accent); color: var(--color-accent); }
+.bk-cal-nav:disabled { opacity: 0.25; cursor: default; }
+.bk-cal-nav svg { width: 12px; height: 12px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; }
+.bk-cal-weekdays { display: grid; grid-template-columns: repeat(7,1fr); margin-bottom: 6px; }
+.bk-cal-wd { text-align: center; font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-text-light); padding: 4px 0; }
+.bk-cal-days { display: grid; grid-template-columns: repeat(7,1fr); gap: 3px; }
+.bk-day {
+  aspect-ratio: 1; display: flex; align-items: center; justify-content: center;
+  font-size: 0.83rem; border-radius: 50%; cursor: pointer;
+  border: 1px solid transparent; transition: all 0.15s; color: var(--color-text);
+}
+.bk-day:hover:not(.bk-day-off):not(.bk-day-empty) { border-color: var(--color-accent); color: var(--color-accent); }
+.bk-day-off { color: var(--color-border); cursor: default; }
+.bk-day-empty { cursor: default; }
+.bk-day-today { border-color: var(--color-border); }
+.bk-day-sel { background: var(--color-accent) !important; color: #fff !important; border-color: var(--color-accent) !important; }
+
+.bk-slots-label { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-text-light); margin-bottom: 14px; }
+.bk-slots-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; margin-bottom: 28px; }
+.bk-slot {
+  border: 1px solid var(--color-border); background: var(--color-bg);
+  padding: 11px 6px; font-family: 'Cormorant Garamond',serif;
+  font-size: 1.05rem; font-style: italic; color: var(--color-text);
+  cursor: pointer; transition: all 0.2s; text-align: center;
+}
+.bk-slot:hover { border-color: var(--color-accent); color: var(--color-accent); }
+.bk-slot.selected { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+
+.bk-nav { display: flex; align-items: center; justify-content: space-between; margin-top: 8px; }
+.bk-back {
+  background: none; border: none; color: var(--color-text-light);
+  font-size: 0.8rem; letter-spacing: 0.04em; cursor: pointer;
+  display: flex; align-items: center; gap: 5px; padding: 0; font-family: inherit;
+}
+.bk-back:hover { color: var(--color-accent); }
+.bk-back svg { width: 12px; height: 12px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; }
+.bk-btn { width: auto; padding: 13px 36px; }
+
+.bk-confirm { text-align: center; padding: 40px 0; }
+.bk-confirm-icon {
+  width: 60px; height: 60px; border-radius: 50%;
+  background: rgba(92,122,98,0.1); display: flex; align-items: center;
+  justify-content: center; margin: 0 auto 20px;
+}
+.bk-confirm-icon svg { width: 26px; height: 26px; stroke: var(--color-accent); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.bk-confirm h3 { font-size: 2rem; font-style: italic; margin-bottom: 10px; }
+.bk-confirm-detail { font-size: 0.92rem; color: var(--color-text-light); line-height: 1.9; margin-bottom: 6px; }
+.bk-confirm-note { font-size: 0.8rem; color: var(--color-text-light); font-style: italic; margin-bottom: 28px; }
+.bk-cal-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  border: 1px solid var(--color-border); padding: 12px 28px;
+  font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--color-text-light); transition: all 0.2s;
+}
+.bk-cal-btn:hover { border-color: var(--color-accent); color: var(--color-accent); }
+.bk-cal-btn svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 1.5; }
+
+.bk-contact-row { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; margin-top: 40px; padding-top: 36px; border-top: 1px solid var(--color-border); }
+
+@media (max-width: 640px) {
+  .bk-service-cards { grid-template-columns: 1fr; }
+  .bk-slots-grid { grid-template-columns: repeat(3,1fr); }
+  .bk-step-txt { display: none; }
+}
+
 /* ── WhatsApp float ── */
 .wa-float {
   position: fixed;
@@ -1745,81 +1863,183 @@ button, input, textarea, select {
   </div>
 </section>
 
-<!-- ── 9. Booking / Contact Form ── -->
+<!-- ── 9. Booking ── -->
 <section id="booking" class="booking-section fade-in" aria-labelledby="booking-heading">
   <div class="container">
-    <div class="booking-inner">
-      <div class="booking-left">
-        <h2 id="booking-heading" data-pl="Zarezerwuj swoją sesję" data-en="Book Your Session">Zarezerwuj swoją sesję</h2>
-        <p class="sub" data-pl="Napisz do mnie lub zadzwoń — odpowiadam w ciągu 24 godzin." data-en="Write to me or call — I reply within 24 hours.">Napisz do mnie lub zadzwoń — odpowiadam w ciągu 24 godzin.</p>
+    <div class="section-header">
+      <h2 id="booking-heading">Zarezerwuj swoją sesję</h2>
+      <p>Wybierz usługę, datę i godzinę — potwierdzenie dotrze na Twój e-mail.</p>
+    </div>
 
-        <div class="contact-item">
-          <div class="contact-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </div>
-          <a href="mailto:kasia@reiki-warszawa.pl">kasia@reiki-warszawa.pl</a><!-- REPLACE: practitioner email -->
+    <div class="booking-wizard" id="bookingWizard">
+
+      <!-- Step indicator -->
+      <div class="bk-steps">
+        <div class="bk-step-label active" id="bkStepL1">
+          <div class="bk-step-num">1</div>
+          <div class="bk-step-txt">Usługa</div>
         </div>
-        <div class="contact-item">
-          <div class="contact-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.6 19.79 19.79 0 0 1 1.61 5.05 2 2 0 0 1 3.59 2.87h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.77-.77a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z"/></svg>
-          </div>
-          <a href="tel:+48519389216">+48 519 389 216</a>
+        <div class="bk-connector"></div>
+        <div class="bk-step-label" id="bkStepL2">
+          <div class="bk-step-num">2</div>
+          <div class="bk-step-txt">Data</div>
         </div>
-        <div class="contact-item">
-          <div class="contact-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
-          <span data-pl="Warszawa, Polska" data-en="Warsaw, Poland">Warszawa, Polska</span><!-- REPLACE: full address if desired -->
+        <div class="bk-connector"></div>
+        <div class="bk-step-label" id="bkStepL3">
+          <div class="bk-step-num">3</div>
+          <div class="bk-step-txt">Godzina</div>
+        </div>
+        <div class="bk-connector"></div>
+        <div class="bk-step-label" id="bkStepL4">
+          <div class="bk-step-num">4</div>
+          <div class="bk-step-txt">Dane</div>
         </div>
       </div>
 
-      <div>
-        <form class="booking-form" id="bookingForm" novalidate>
-          <div class="form-row">
-            <div class="form-field">
-              <label for="fname" data-pl="Imię i nazwisko" data-en="Full Name">Imię i nazwisko</label>
-              <input type="text" id="fname" name="name" autocomplete="name" required
-                data-placeholder-pl="Katarzyna Nowak" data-placeholder-en="Jane Smith"
-                placeholder="Katarzyna Nowak">
-            </div>
-            <div class="form-field">
-              <label for="femail" data-pl="Adres email" data-en="Email Address">Adres email</label>
-              <input type="email" id="femail" name="email" autocomplete="email" required
-                placeholder="email@domena.pl">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-field">
-              <label for="fphone" data-pl="Telefon (opcjonalnie)" data-en="Phone (optional)">Telefon (opcjonalnie)</label>
-              <input type="tel" id="fphone" name="phone" autocomplete="tel"
-                placeholder="+48 600 000 000">
-            </div>
-            <div class="form-field">
-              <label for="fsubject" data-pl="Temat" data-en="Subject">Temat</label>
-              <input type="text" id="fsubject" name="subject"
-                data-placeholder-pl="Pierwsza sesja" data-placeholder-en="First session"
-                placeholder="Pierwsza sesja">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-field full">
-              <label for="fmessage" data-pl="Wiadomość" data-en="Message">Wiadomość</label>
-              <textarea id="fmessage" name="message" rows="5" required
-                data-placeholder-pl="Powiedz mi kilka słów o sobie i o tym, czego szukasz..." data-placeholder-en="Tell me a little about yourself and what you're looking for..."
-                placeholder="Powiedz mi kilka słów o sobie i o tym, czego szukasz..."></textarea>
-            </div>
-          </div>
-          <button type="submit" class="form-submit">
-            <span data-pl="Wyślij wiadomość" data-en="Send Message">Wyślij wiadomość</span>
-          </button>
-        </form>
+      <!-- Summary bar (visible from step 2 onwards) -->
+      <div class="bk-summary hidden" id="bkSummary" aria-live="polite"></div>
 
-        <div class="booking-thankyou" id="bookingThankyou" hidden>
-          <h3 data-pl="Dziękuję!" data-en="Thank you!">Dziękuję!</h3>
-          <p data-pl="Dziękuję za wiadomość! Odezwę się w ciągu 24 godzin." data-en="Thank you for your message! I'll get back to you within 24 hours.">Dziękuję za wiadomość! Odezwę się w ciągu 24 godzin.</p>
+      <!-- Panel 1: Service selection -->
+      <div class="bk-panel" id="bkPanel1">
+        <div class="bk-service-cards">
+          <button class="bk-service-card" type="button" data-service="distance" data-dur="45" data-price="200" data-name="Reiki na odległość">
+            <div class="bk-sc-type">Sesja zdalna</div>
+            <div class="bk-sc-name">Reiki na odległość</div>
+            <div class="bk-sc-dur">45 minut</div>
+            <div class="bk-sc-price">200<span> zł</span></div>
+          </button>
+          <button class="bk-service-card" type="button" data-service="standard" data-dur="60" data-price="300" data-name="Sesja standardowa">
+            <div class="bk-sc-type">Najpopularniejsza</div>
+            <div class="bk-sc-name">Sesja standardowa</div>
+            <div class="bk-sc-dur">60 minut</div>
+            <div class="bk-sc-price">300<span> zł</span></div>
+          </button>
+          <button class="bk-service-card" type="button" data-service="extended" data-dur="90" data-price="400" data-name="Sesja rozszerzona">
+            <div class="bk-sc-type">Głęboka praca</div>
+            <div class="bk-sc-name">Sesja rozszerzona</div>
+            <div class="bk-sc-dur">90 minut</div>
+            <div class="bk-sc-price">400<span> zł</span></div>
+          </button>
         </div>
+        <div class="bk-nav">
+          <span></span>
+          <button class="form-submit bk-btn" id="bkNext1" type="button" disabled>Wybierz datę →</button>
+        </div>
+      </div>
+
+      <!-- Panel 2: Date picker -->
+      <div class="bk-panel hidden" id="bkPanel2">
+        <div class="bk-cal">
+          <div class="bk-cal-header">
+            <button class="bk-cal-nav" id="bkCalPrev" type="button" aria-label="Poprzedni miesiąc">
+              <svg viewBox="0 0 12 12"><path d="M8 2L4 6l4 4"/></svg>
+            </button>
+            <div class="bk-cal-month" id="bkCalMonth"></div>
+            <button class="bk-cal-nav" id="bkCalNext" type="button" aria-label="Następny miesiąc">
+              <svg viewBox="0 0 12 12"><path d="M4 2l4 4-4 4"/></svg>
+            </button>
+          </div>
+          <div class="bk-cal-weekdays">
+            <div class="bk-cal-wd">Pn</div>
+            <div class="bk-cal-wd">Wt</div>
+            <div class="bk-cal-wd">Śr</div>
+            <div class="bk-cal-wd">Cz</div>
+            <div class="bk-cal-wd">Pt</div>
+            <div class="bk-cal-wd">So</div>
+            <div class="bk-cal-wd">Nd</div>
+          </div>
+          <div class="bk-cal-days" id="bkCalDays"></div>
+        </div>
+        <div class="bk-nav">
+          <button class="bk-back" id="bkBack2" type="button">
+            <svg viewBox="0 0 12 12"><path d="M8 2L4 6l4 4"/></svg> Wróć
+          </button>
+          <button class="form-submit bk-btn" id="bkNext2" type="button" disabled>Wybierz godzinę →</button>
+        </div>
+      </div>
+
+      <!-- Panel 3: Time slots -->
+      <div class="bk-panel hidden" id="bkPanel3">
+        <div class="bk-slots-label">Dostępne godziny</div>
+        <div class="bk-slots-grid" id="bkSlotsGrid"></div>
+        <div class="bk-nav">
+          <button class="bk-back" id="bkBack3" type="button">
+            <svg viewBox="0 0 12 12"><path d="M8 2L4 6l4 4"/></svg> Wróć
+          </button>
+          <button class="form-submit bk-btn" id="bkNext3" type="button" disabled>Podaj dane →</button>
+        </div>
+      </div>
+
+      <!-- Panel 4: Contact details -->
+      <div class="bk-panel hidden" id="bkPanel4">
+        <form id="bkForm" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="bkName">Imię i nazwisko *</label>
+              <input type="text" id="bkName" name="name" autocomplete="name" required placeholder="Anna Nowak">
+            </div>
+            <div class="form-field">
+              <label for="bkEmail">Adres e-mail *</label>
+              <input type="email" id="bkEmail" name="email" autocomplete="email" required placeholder="anna@domena.pl">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="bkPhone">Telefon (opcjonalnie)</label>
+              <input type="tel" id="bkPhone" name="phone" autocomplete="tel" placeholder="+48 600 000 000">
+            </div>
+            <div class="form-field">
+              <label for="bkMsg">Wiadomość (opcjonalnie)</label>
+              <input type="text" id="bkMsg" name="message" placeholder="Coś, co chcesz mi przekazać...">
+            </div>
+          </div>
+          <div class="bk-nav" style="margin-top:24px;">
+            <button type="button" class="bk-back" id="bkBack4">
+              <svg viewBox="0 0 12 12"><path d="M8 2L4 6l4 4"/></svg> Wróć
+            </button>
+            <button type="submit" class="form-submit bk-btn" id="bkSubmit">Zarezerwuj sesję</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Confirmation screen -->
+      <div class="bk-panel bk-confirm hidden" id="bkConfirm">
+        <div class="bk-confirm-icon">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h3>Rezerwacja przyjęta!</h3>
+        <p class="bk-confirm-detail" id="bkConfirmDetail"></p>
+        <p class="bk-confirm-note">Sprawdź skrzynkę e-mail — potwierdzenie jest już w drodze.</p>
+        <a id="bkCalLink" href="#" target="_blank" rel="noopener" class="bk-cal-btn">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Dodaj do Google Calendar
+        </a>
+      </div>
+
+    </div><!-- /booking-wizard -->
+
+    <!-- Contact details below wizard -->
+    <div class="bk-contact-row">
+      <div class="contact-item">
+        <div class="contact-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <a href="mailto:kasia@reiki-warszawa.pl">kasia@reiki-warszawa.pl</a>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.6 19.79 19.79 0 0 1 1.61 5.05 2 2 0 0 1 3.59 2.87h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.77-.77a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z"/></svg>
+        </div>
+        <a href="tel:+48519389216">+48 519 389 216</a>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <span>Warszawa, Polska</span>
       </div>
     </div>
+
   </div>
 </section>
 
@@ -1987,18 +2207,279 @@ button, input, textarea, select {
     });
   });
 
-  /* ── Contact form submit ── */
-  var form = document.getElementById('bookingForm');
-  var thankyou = document.getElementById('bookingThankyou');
-  if (form && thankyou) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      form.hidden = true;
-      thankyou.hidden = false;
-      /* Re-apply current language to newly visible block */
-      setLang(localStorage.getItem('lang') || 'pl');
-    });
+})();
+</script>
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script>
+/* ── Booking Widget ── */
+(function () {
+  /* ── CONFIG: fill these in after setting up EmailJS ── */
+  var EMAILJS_PUBLIC_KEY    = 'YOUR_PUBLIC_KEY';
+  var EMAILJS_SERVICE_ID    = 'YOUR_SERVICE_ID';
+  var EMAILJS_TEMPLATE_PRO  = 'YOUR_TEMPLATE_PRACTITIONER';
+  var EMAILJS_TEMPLATE_CLI  = 'YOUR_TEMPLATE_CLIENT';
+  var PRACTITIONER_EMAIL    = 'kasia@reiki-warszawa.pl';
+
+  /* State */
+  var bk = { svcName:'', svcKey:'', dur:0, price:0,
+             date:null, time:null,
+             clientName:'', clientEmail:'', clientPhone:'', clientMsg:'' };
+  var calYear, calMonth;
+
+  /* ── Helpers ── */
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+
+  function getEaster(y) {
+    var a=y%19, b=Math.floor(y/100), c=y%100;
+    var d=Math.floor(b/4), e=b%4, f=Math.floor((b+8)/25);
+    var g=Math.floor((b-f+1)/3), h=(19*a+b-d-g+15)%30;
+    var i=Math.floor(c/4), k=c%4, l=(32+2*e+2*i-h-k)%7;
+    var m=Math.floor((a+11*h+22*l)/451);
+    var mo=Math.floor((h+l-7*m+114)/31);
+    var da=((h+l-7*m+114)%31)+1;
+    return new Date(y, mo-1, da);
   }
+
+  function addDays(d, n) { var r=new Date(d); r.setDate(r.getDate()+n); return r; }
+  function toIso(d)       { return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate()); }
+
+  function isHoliday(d) {
+    var y=d.getFullYear(), iso=toIso(d);
+    var fixed=[y+'-01-01', y+'-01-06', y+'-05-01', y+'-05-03',
+               y+'-08-15', y+'-11-01', y+'-11-11', y+'-12-25', y+'-12-26'];
+    if (fixed.indexOf(iso) !== -1) return true;
+    var e=getEaster(y);
+    var mov=[e, addDays(e,1), addDays(e,49), addDays(e,60)];
+    for (var i=0; i<mov.length; i++) { if (toIso(mov[i])===iso) return true; }
+    return false;
+  }
+
+  function isBlocked(d) { return d.getDay()===0 || isHoliday(d); }
+
+  var MONTHS     = ['Styczeń','Luty','Marzec','Kwiecień','Maj','Czerwiec',
+                    'Lipiec','Sierpień','Wrzesień','Październik','Listopad','Grudzień'];
+  var MONTHS_GEN = ['stycznia','lutego','marca','kwietnia','maja','czerwca',
+                    'lipca','sierpnia','września','października','listopada','grudnia'];
+
+  function fmtDate(d) { return d.getDate()+' '+MONTHS_GEN[d.getMonth()]+' '+d.getFullYear(); }
+
+  /* ── Step navigation ── */
+  function showPanel(n) {
+    for (var i=1; i<=4; i++) {
+      document.getElementById('bkPanel'+i).classList.toggle('hidden', i!==n);
+      document.getElementById('bkStepL'+i).classList.toggle('active', i===n);
+      document.getElementById('bkStepL'+i).classList.toggle('done',   i<n);
+    }
+    document.getElementById('bkConfirm').classList.add('hidden');
+    updateSummary(n);
+  }
+
+  function updateSummary(step) {
+    var el = document.getElementById('bkSummary');
+    if (step < 2) { el.classList.add('hidden'); return; }
+    var parts = [];
+    if (bk.svcName) parts.push('<strong>'+bk.svcName+'</strong> · '+bk.dur+' min · '+bk.price+' zł');
+    if (bk.date)    parts.push('<strong>'+fmtDate(bk.date)+'</strong>');
+    if (bk.time)    parts.push('<strong>'+bk.time+'</strong>');
+    el.innerHTML = parts.join(' <span class="bk-summary-dot">·</span> ');
+    el.classList.remove('hidden');
+  }
+
+  /* ── Calendar ── */
+  function renderCal() {
+    var today    = new Date(); today.setHours(0,0,0,0);
+    var firstDay = new Date(calYear, calMonth, 1);
+    var lastDay  = new Date(calYear, calMonth+1, 0);
+    var thisMonth= new Date(today.getFullYear(), today.getMonth(), 1);
+
+    document.getElementById('bkCalPrev').disabled = (firstDay <= thisMonth);
+    document.getElementById('bkCalMonth').textContent = MONTHS[calMonth]+' '+calYear;
+
+    var grid = document.getElementById('bkCalDays');
+    grid.innerHTML = '';
+
+    /* Leading blank cells — week starts Monday */
+    var startDow = firstDay.getDay();
+    var blanks   = (startDow === 0) ? 6 : startDow - 1;
+    for (var b=0; b<blanks; b++) {
+      var bl = document.createElement('div');
+      bl.className = 'bk-day bk-day-empty';
+      grid.appendChild(bl);
+    }
+
+    for (var day=1; day<=lastDay.getDate(); day++) {
+      var d   = new Date(calYear, calMonth, day);
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'bk-day';
+      btn.textContent = day;
+      btn.setAttribute('aria-label', fmtDate(d));
+
+      if (isBlocked(d) || d < today) {
+        btn.classList.add('bk-day-off');
+        btn.disabled = true;
+      } else {
+        if (bk.date && toIso(bk.date)===toIso(d)) btn.classList.add('bk-day-sel');
+        if (toIso(d) === toIso(today))             btn.classList.add('bk-day-today');
+        btn.addEventListener('click', (function(date) {
+          return function() { selectDate(date); };
+        })(d));
+      }
+      grid.appendChild(btn);
+    }
+  }
+
+  function selectDate(d) {
+    bk.date = new Date(d);
+    bk.time = null;
+    document.getElementById('bkNext2').disabled = false;
+    renderCal();
+  }
+
+  /* ── Time slots ── */
+  function renderSlots() {
+    var grid = document.getElementById('bkSlotsGrid');
+    grid.innerHTML = '';
+    /* For 90-min sessions last possible start is 18:00 (18:00+90=19:30 ≤ 20:00) */
+    var maxH = (bk.dur === 90) ? 18 : 19;
+    for (var h=9; h<=maxH; h++) {
+      (function(hour) {
+        var label = hour+':00';
+        var btn   = document.createElement('button');
+        btn.type  = 'button';
+        btn.className = 'bk-slot'+(bk.time===label ? ' selected' : '');
+        btn.textContent = label;
+        btn.addEventListener('click', function() {
+          bk.time = label;
+          document.getElementById('bkNext3').disabled = false;
+          renderSlots();
+        });
+        grid.appendChild(btn);
+      })(h);
+    }
+  }
+
+  /* ── Google Calendar link ── */
+  function buildCalLink() {
+    var s = new Date(bk.date);
+    s.setHours(parseInt(bk.time), 0, 0, 0);
+    var e2 = new Date(s.getTime() + bk.dur * 60000);
+    function gFmt(d) {
+      return d.getFullYear()+pad(d.getMonth()+1)+pad(d.getDate())+
+             'T'+pad(d.getHours())+pad(d.getMinutes())+'00';
+    }
+    return 'https://calendar.google.com/calendar/render?action=TEMPLATE'+
+      '&text='+encodeURIComponent('Sesja Reiki – '+bk.svcName)+
+      '&dates='+gFmt(s)+'/'+gFmt(e2)+
+      '&details='+encodeURIComponent('Sesja Reiki z Katarzyną Jaworską\n'+
+        bk.dur+' min · '+bk.price+' zł\nKontakt: '+PRACTITIONER_EMAIL)+
+      '&location='+encodeURIComponent('Warszawa');
+  }
+
+  /* ── EmailJS send ── */
+  function sendEmails(cb) {
+    if (!window.emailjs || EMAILJS_PUBLIC_KEY === 'YOUR_PUBLIC_KEY') { cb(null); return; }
+    emailjs.init(EMAILJS_PUBLIC_KEY);
+    var p = {
+      client_name:   bk.clientName,
+      client_email:  bk.clientEmail,
+      client_phone:  bk.clientPhone  || '—',
+      service_name:  bk.svcName,
+      service_dur:   bk.dur+' min',
+      service_price: bk.price+' zł',
+      booking_date:  fmtDate(bk.date),
+      booking_time:  bk.time,
+      client_msg:    bk.clientMsg    || '—'
+    };
+    /* Build separate param objects for each template */
+    var p1={}, p2={};
+    for (var k in p) { p1[k]=p[k]; p2[k]=p[k]; }
+    p1.to_email = PRACTITIONER_EMAIL;
+    p2.to_email = bk.clientEmail;
+    emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_PRO, p1)
+      .then(function() { return emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_CLI, p2); })
+      .then(function() { cb(null); })
+      .catch(function() { cb(null); }); /* show confirmation even if email fails */
+  }
+
+  /* ── Confirmation screen ── */
+  function showConfirm() {
+    for (var i=1; i<=4; i++) {
+      document.getElementById('bkPanel'+i).classList.add('hidden');
+      var sl = document.getElementById('bkStepL'+i);
+      sl.classList.remove('active');
+      sl.classList.add('done');
+    }
+    document.getElementById('bkSummary').classList.add('hidden');
+    document.getElementById('bkConfirm').classList.remove('hidden');
+    document.getElementById('bkConfirmDetail').textContent =
+      'Sesja "'+bk.svcName+'" – '+fmtDate(bk.date)+', godz. '+bk.time+
+      '. Potwierdzenie zostanie wysłane na adres '+bk.clientEmail+'.';
+    document.getElementById('bkCalLink').href = buildCalLink();
+  }
+
+  /* ── Init ── */
+  var now = new Date();
+  calYear  = now.getFullYear();
+  calMonth = now.getMonth();
+
+  /* Service card clicks */
+  document.querySelectorAll('.bk-service-card').forEach(function(card) {
+    card.addEventListener('click', function() {
+      document.querySelectorAll('.bk-service-card').forEach(function(c) { c.classList.remove('selected'); });
+      card.classList.add('selected');
+      bk.svcKey  = card.dataset.service;
+      bk.svcName = card.dataset.name;
+      bk.dur     = parseInt(card.dataset.dur);
+      bk.price   = parseInt(card.dataset.price);
+      document.getElementById('bkNext1').disabled = false;
+    });
+  });
+
+  /* Navigation buttons */
+  document.getElementById('bkNext1').addEventListener('click', function() { showPanel(2); renderCal(); });
+  document.getElementById('bkBack2').addEventListener('click', function() { showPanel(1); });
+  document.getElementById('bkNext2').addEventListener('click', function() { showPanel(3); renderSlots(); });
+  document.getElementById('bkBack3').addEventListener('click', function() { showPanel(2); renderCal(); });
+  document.getElementById('bkNext3').addEventListener('click', function() { showPanel(4); });
+  document.getElementById('bkBack4').addEventListener('click', function() { showPanel(3); renderSlots(); });
+
+  /* Calendar month navigation */
+  document.getElementById('bkCalPrev').addEventListener('click', function() {
+    if (--calMonth < 0) { calMonth=11; calYear--; }
+    renderCal();
+  });
+  document.getElementById('bkCalNext').addEventListener('click', function() {
+    if (++calMonth > 11) { calMonth=0; calYear++; }
+    renderCal();
+  });
+
+  /* Form submit */
+  document.getElementById('bkForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var nEl = document.getElementById('bkName');
+    var eEl = document.getElementById('bkEmail');
+    nEl.style.borderColor = ''; eEl.style.borderColor = '';
+    var ok = true;
+    if (!nEl.value.trim())                              { nEl.style.borderColor='var(--color-gold)'; ok=false; }
+    if (!eEl.value.trim() || eEl.value.indexOf('@')<1) { eEl.style.borderColor='var(--color-gold)'; ok=false; }
+    if (!ok) return;
+
+    bk.clientName  = nEl.value.trim();
+    bk.clientEmail = eEl.value.trim();
+    bk.clientPhone = document.getElementById('bkPhone').value.trim();
+    bk.clientMsg   = document.getElementById('bkMsg').value.trim();
+
+    var sub = document.getElementById('bkSubmit');
+    sub.disabled    = true;
+    sub.textContent = 'Wysyłam…';
+
+    sendEmails(function() { showConfirm(); });
+  });
+
 })();
 </script>
 </body>
