@@ -1,0 +1,2005 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Katarzyna Jaworska | Reiki Warszawa</title><!-- REPLACE: practitioner name + city -->
+
+<!-- SEO & OG (static Polish — intentional for crawlers) -->
+<meta name="description" content="Sesje Reiki w Warszawie — przywróć równowagę ciała i umysłu. Katarzyna Jaworska, certyfikowana terapeutka Reiki II stopnia."><!-- REPLACE: practitioner name + description -->
+<meta property="og:title" content="Katarzyna Jaworska | Reiki Warszawa"><!-- REPLACE: practitioner name -->
+<meta property="og:description" content="Sesje Reiki w Warszawie — przywróć równowagę ciała i umysłu.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:locale:alternate" content="en_US">
+<link rel="canonical" href="https://katarzynajaworska.pl/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:image" content="https://katarzynajaworska.pl/horizontal-image-female-reiki-therapist-holding-hands-patient-chest-healing-heart-chakra-peaceful-beautiful-teenage-girl-lying-with-her-eyes-closed.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "HealthAndBeautyBusiness",
+      "@id": "https://katarzynajaworska.pl/#business",
+      "name": "Katarzyna Jaworska Reiki",
+      "url": "https://katarzynajaworska.pl",
+      "description": "Sesje Reiki w Warszawie — przywróć równowagę ciała i umysłu. Katarzyna Jaworska, certyfikowana terapeutka Reiki II stopnia.",
+      "telephone": "+48519389216",
+      "email": "kasia@reiki-warszawa.pl",
+      "image": "https://katarzynajaworska.pl/horizontal-image-female-reiki-therapist-holding-hands-patient-chest-healing-heart-chakra-peaceful-beautiful-teenage-girl-lying-with-her-eyes-closed.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Warszawa",
+        "addressRegion": "Mazowieckie",
+        "addressCountry": "PL"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "52.2297",
+        "longitude": "21.0122"
+      },
+      "priceRange": "200–400 zł",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+          "opens": "09:00",
+          "closes": "20:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/lettinggoofadream/"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://katarzynajaworska.pl/#person",
+      "name": "Katarzyna Jaworska",
+      "jobTitle": "Certyfikowana terapeutka Reiki",
+      "url": "https://katarzynajaworska.pl",
+      "image": "https://katarzynajaworska.pl/DSC00564.JPG",
+      "worksFor": { "@id": "https://katarzynajaworska.pl/#business" }
+    }
+  ]
+}
+</script>
+
+<!-- Google Fonts — performance-safe -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+/* ── Color system ── */
+:root {
+  --color-bg: #FAF7F2;
+  --color-bg-card: #F2EDE5;
+  --color-text: #2C2C2C;
+  --color-text-light: #6B6560;
+  --color-accent: #5C7A62;
+  --color-gold: #B89A5E;
+  --color-border: #E0D8CF;
+}
+
+/* ── Reset & base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+img { display: block; max-width: 100%; }
+
+a { color: inherit; text-decoration: none; }
+
+button, input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* ── Layout helpers ── */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.section-header h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-style: italic;
+  color: var(--color-text);
+  margin-bottom: 10px;
+}
+
+.section-header p {
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+  letter-spacing: 0.03em;
+}
+
+/* ── Scroll animations ── */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Buttons ── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--color-gold);
+  color: #fff;
+  border: none;
+  padding: 14px 32px;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.btn-primary:hover {
+  background: #a38750;
+  transform: translateY(-1px);
+}
+
+/* ── Navigation ── */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  padding: 18px 0;
+}
+
+.nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: 1px solid var(--color-border);
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  color: var(--color-text-light);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.lang-toggle:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.lang-toggle .lang-active {
+  color: var(--color-accent);
+  font-weight: 400;
+}
+
+.nav-blog-link {
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  color: var(--color-text-light);
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+.nav-blog-link:hover { color: var(--color-accent); }
+
+.nav-cta {
+  display: inline-block;
+  background: var(--color-gold);
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.nav-cta:hover { background: #a38750; }
+
+/* ── Hero ── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 24px 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 60% 30%, rgba(92,122,98,0.06) 0%, transparent 60%),
+              radial-gradient(ellipse at 20% 80%, rgba(184,154,94,0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero-orb {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(92,122,98,0.15) 0%, transparent 70%);
+  box-shadow: 0 0 60px rgba(92,122,98,0.2), 0 0 120px rgba(92,122,98,0.1);
+  animation: float 6s ease-in-out infinite;
+  margin-bottom: 40px;
+  flex-shrink: 0;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.hero-eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 6vw, 5rem);
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.1;
+  max-width: 680px;
+  margin: 0 auto 24px;
+  color: var(--color-text);
+}
+
+.hero-sub {
+  font-size: 1rem;
+  color: var(--color-text-light);
+  max-width: 420px;
+  margin: 0 auto 40px;
+  line-height: 1.8;
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-text-light);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.hero-scroll-line {
+  width: 1px;
+  height: 40px;
+  background: var(--color-border);
+  animation: scrollLine 2s ease-in-out infinite;
+}
+
+@keyframes scrollLine {
+  0% { transform: scaleY(0); transform-origin: top; }
+  50% { transform: scaleY(1); transform-origin: top; }
+  51% { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+/* ── Section: What Is Reiki ── */
+.reiki-section {
+  padding: 100px 0;
+}
+
+.reiki-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.reiki-text h2 {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-style: italic;
+  margin-bottom: 24px;
+  color: var(--color-text);
+}
+
+.reiki-text p {
+  color: var(--color-text-light);
+  margin-bottom: 16px;
+  font-size: 0.97rem;
+}
+
+.reiki-text p:last-child { margin-bottom: 0; }
+
+.reiki-img-wrap {
+  overflow: hidden;
+  width: 360px;
+  height: 480px;
+  flex-shrink: 0;
+}
+
+.reiki-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}
+
+/* ── Section: Benefits ── */
+.benefits-section {
+  padding: 100px 0;
+  background: var(--color-bg-card);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.benefit-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  padding: 36px 28px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(44,44,44,0.08);
+}
+
+.benefit-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+}
+
+.benefit-icon svg {
+  width: 28px;
+  height: 28px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+}
+
+.benefit-card h3 {
+  font-size: 1.25rem;
+  font-style: italic;
+  margin-bottom: 10px;
+  color: var(--color-text);
+}
+
+.benefit-card p {
+  font-size: 0.87rem;
+  color: var(--color-text-light);
+  line-height: 1.75;
+}
+
+/* ── Section: How Session Works ── */
+.session-section {
+  padding: 100px 0;
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: calc(100% / 6);
+  right: calc(100% / 6);
+  height: 1px;
+  background: var(--color-border);
+  z-index: 0;
+}
+
+.timeline-step {
+  text-align: center;
+  padding: 0 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.step-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4.5rem;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--color-border);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.step-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  margin: 0 auto 20px;
+  position: relative;
+  top: -5px;
+}
+
+.timeline-step h3 {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 10px;
+  color: var(--color-text);
+}
+
+.timeline-step p {
+  font-size: 0.87rem;
+  color: var(--color-text-light);
+  line-height: 1.75;
+}
+
+/* ── Section: Pricing ── */
+.pricing-section {
+  padding: 100px 0;
+  background: var(--color-bg-card);
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.pricing-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  padding: 40px 32px 36px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(44,44,44,0.09);
+}
+
+.pricing-card-img {
+  height: 420px;
+  margin: -40px -32px 28px;
+  overflow: hidden;
+}
+
+.pricing-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.5s ease;
+}
+
+.pricing-card:hover .pricing-card-img img {
+  transform: scale(1.05);
+}
+
+.pricing-card.featured {
+  border-color: var(--color-accent);
+  position: relative;
+}
+
+.pricing-badge {
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-accent);
+  color: #fff;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  white-space: nowrap;
+}
+
+.pricing-type {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 12px;
+}
+
+.pricing-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--color-text);
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+
+.pricing-duration {
+  font-size: 0.82rem;
+  color: var(--color-text-light);
+  letter-spacing: 0.05em;
+  margin-bottom: 28px;
+}
+
+.pricing-features {
+  list-style: none;
+  margin-bottom: 32px;
+  flex: 1;
+}
+
+.pricing-features li {
+  font-size: 0.88rem;
+  color: var(--color-text-light);
+  padding: 7px 0;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pricing-features li:last-child {
+  border-bottom: none;
+}
+
+.pricing-features li::before {
+  content: '';
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.pricing-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--color-text);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.pricing-price-note {
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+  margin-bottom: 28px;
+  letter-spacing: 0.03em;
+}
+
+.pricing-cta {
+  display: block;
+  text-align: center;
+  padding: 14px 20px;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  text-decoration: none;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-light);
+  background: transparent;
+}
+
+.pricing-cta:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.pricing-cta.primary {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+  color: #fff;
+}
+
+.pricing-cta.primary:hover {
+  background: #a38750;
+  border-color: #a38750;
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+}
+
+/* ── Section: About ── */
+.about-section {
+  padding: 100px 0;
+  background: var(--color-bg-card);
+}
+
+.about-inner {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.about-photo-wrap {
+  flex-shrink: 0;
+}
+
+.about-photo {
+  width: 320px;
+  height: 440px;
+  border-radius: 0;
+  background: var(--color-bg-card);
+  border: none;
+  overflow: hidden;
+  position: relative;
+}
+
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 0;
+}
+
+.about-photo-placeholder {
+  font-size: 0.75rem;
+  font-family: monospace;
+  color: var(--color-text-light);
+  text-align: center;
+  padding: 16px;
+  line-height: 1.6;
+}
+
+.about-text .eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 14px;
+}
+
+.about-text h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-style: italic;
+  margin-bottom: 20px;
+  color: var(--color-text);
+}
+
+.about-text p {
+  color: var(--color-text-light);
+  margin-bottom: 16px;
+  font-size: 0.97rem;
+  line-height: 1.8;
+}
+
+.about-text p:last-of-type { margin-bottom: 24px; }
+
+.about-certs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.cert-badge {
+  display: inline-block;
+  border: 1px solid var(--color-border);
+  padding: 5px 14px;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--color-text-light);
+}
+
+/* ── Section: Testimonials ── */
+.testimonials-section {
+  padding: 100px 0;
+}
+
+.testimonials-track-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  cursor: grab;
+}
+
+.testimonials-track-wrap:active { cursor: grabbing; }
+.testimonials-track-wrap::-webkit-scrollbar { display: none; }
+
+.testimonials-grid {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  padding-bottom: 8px;
+}
+
+.testimonial-card {
+  border: 1px solid var(--color-border);
+  padding: 36px 28px 28px;
+  background: var(--color-bg);
+  position: relative;
+  flex: 0 0 340px;
+  width: 340px;
+}
+
+.testimonial-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4rem;
+  line-height: 1;
+  color: var(--color-border);
+  position: absolute;
+  top: 16px;
+  left: 22px;
+  font-style: italic;
+  user-select: none;
+}
+
+.testimonial-card p {
+  font-size: 0.93rem;
+  color: var(--color-text-light);
+  line-height: 1.8;
+  margin-top: 20px;
+  font-style: italic;
+}
+
+.testimonial-name {
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: var(--color-accent);
+  letter-spacing: 0.05em;
+}
+
+.testimonial-stars {
+  color: var(--color-gold);
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+
+/* ── Section: FAQ ── */
+.faq-section {
+  padding: 100px 0;
+}
+
+.faq-list {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.faq-item:first-child {
+  border-top: 1px solid var(--color-border);
+}
+
+.faq-trigger {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.faq-question {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--color-text);
+  line-height: 1.3;
+}
+
+.faq-icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+  transition: transform 0.3s ease, border-color 0.2s;
+}
+
+.faq-icon svg {
+  width: 12px;
+  height: 12px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.open .faq-icon {
+  border-color: var(--color-accent);
+}
+
+.faq-item.open .faq-icon svg {
+  transform: rotate(45deg);
+}
+
+.faq-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s ease;
+}
+
+.faq-item.open .faq-body {
+  grid-template-rows: 1fr;
+}
+
+.faq-body-inner {
+  overflow: hidden;
+}
+
+.faq-answer {
+  padding: 0 0 24px 0;
+  font-size: 0.93rem;
+  color: var(--color-text-light);
+  line-height: 1.85;
+  max-width: 640px;
+}
+
+/* ── Section: Booking / Contact ── */
+.booking-section {
+  padding: 100px 0;
+  background: var(--color-bg-card);
+}
+
+.booking-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.booking-left h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.booking-left .sub {
+  color: var(--color-text-light);
+  font-size: 0.93rem;
+  margin-bottom: 36px;
+  line-height: 1.7;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+}
+
+.contact-item a {
+  color: var(--color-text-light);
+  transition: color 0.2s;
+}
+
+.contact-item a:hover { color: var(--color-accent); }
+
+.contact-icon {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--color-accent);
+}
+
+.contact-icon svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+}
+
+.booking-form {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  padding: 40px;
+}
+
+.booking-thankyou {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.booking-thankyou h3 {
+  font-size: 1.6rem;
+  font-style: italic;
+  margin-bottom: 12px;
+  color: var(--color-accent);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-field.full {
+  grid-column: 1 / -1;
+}
+
+.form-field label {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+}
+
+.form-field input,
+.form-field textarea {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  padding: 12px 14px;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  transition: border-color 0.2s;
+  resize: none;
+  width: 100%;
+  outline: none;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: var(--color-accent);
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: var(--color-border);
+}
+
+.form-submit {
+  margin-top: 20px;
+  width: 100%;
+  background: var(--color-gold);
+  color: #fff;
+  border: none;
+  padding: 16px;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.87rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.form-submit:hover { background: #a38750; }
+
+/* ── Footer ── */
+.footer {
+  background: var(--color-text);
+  color: var(--color-bg);
+  padding: 48px 0 32px;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.footer-brand .footer-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+}
+
+.footer-brand .footer-tagline {
+  font-size: 0.78rem;
+  color: var(--color-text-light);
+  letter-spacing: 0.05em;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.footer-social {
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.6);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.footer-social:hover {
+  color: var(--color-gold);
+  border-color: var(--color-gold);
+}
+
+.footer-social svg {
+  width: 15px;
+  height: 15px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.footer-copy {
+  text-align: right;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.35);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 24px;
+  text-align: center;
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.25);
+  letter-spacing: 0.05em;
+}
+
+/* ── Instagram section ── */
+.instagram-section {
+  padding: 100px 0;
+  background: var(--color-bg);
+}
+
+.instagram-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.instagram-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  color: var(--color-text-light);
+  margin-bottom: 16px;
+}
+
+.instagram-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.instagram-handle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--color-text);
+  margin-bottom: 8px;
+}
+
+.instagram-sub {
+  font-size: 0.87rem;
+  color: var(--color-text-light);
+  letter-spacing: 0.03em;
+}
+
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 6px;
+  margin-bottom: 40px;
+}
+
+.instagram-post {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  display: block;
+}
+
+.instagram-post img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+.instagram-post:hover img {
+  transform: scale(1.07);
+}
+
+.instagram-post-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(44, 44, 44, 0.38);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.instagram-post:hover .instagram-post-overlay {
+  opacity: 1;
+}
+
+.instagram-post-overlay svg {
+  width: 28px;
+  height: 28px;
+  stroke: #fff;
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.instagram-follow {
+  text-align: center;
+}
+
+.instagram-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--color-border);
+  padding: 13px 32px;
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.instagram-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.instagram-btn svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .instagram-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ── WhatsApp float ── */
+.wa-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 100;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.wa-float:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+}
+
+.wa-float svg {
+  width: 26px;
+  height: 26px;
+  fill: #fff;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .reiki-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .reiki-shape { height: 200px; order: -1; }
+  .reiki-shape::before { width: 180px; height: 180px; }
+
+  .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .timeline {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .timeline::before { display: none; }
+
+  .about-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .about-photo { margin: 0 auto; }
+
+  .about-certs { justify-content: center; }
+
+  .testimonial-card { flex: 0 0 300px; width: 300px; }
+
+  .booking-inner { grid-template-columns: 1fr; gap: 40px; }
+
+  .footer-inner { grid-template-columns: 1fr; text-align: center; gap: 16px; }
+  .footer-copy { text-align: center; }
+}
+
+@media (max-width: 600px) {
+  .nav-logo {
+    font-size: 1rem;
+    max-width: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .benefits-grid { grid-template-columns: 1fr; }
+
+  .form-row { grid-template-columns: 1fr; }
+
+  .booking-form { padding: 28px 20px; }
+
+  .hero h1 { font-size: 2.3rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── 1. Navigation ── -->
+<nav class="nav" role="navigation" aria-label="Główna nawigacja">
+  <div class="container">
+    <a href="#" class="nav-logo">Katarzyna Jaworska | Reiki</a><!-- REPLACE: practitioner name -->
+    <div class="nav-right">
+      <a href="blog.html" class="nav-blog-link">Blog</a>
+      <button class="lang-toggle" id="langToggle" aria-label="Zmień język / Switch language">
+        <span class="lang-active" id="langPL">PL</span>
+        <span style="color: var(--color-border);">|</span>
+        <span id="langEN">EN</span>
+      </button>
+      <a href="#booking" class="nav-cta">
+        <span data-pl="Umów wizytę" data-en="Book a Session">Umów wizytę</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── 2. Hero ── -->
+<section class="hero" aria-label="Hero">
+  <div class="hero-orb" aria-hidden="true"></div>
+  <p class="hero-eyebrow" data-pl="Reiki · Warszawa" data-en="Reiki · Warsaw">Reiki · Warszawa</p><!-- REPLACE: city if different -->
+  <h1 data-pl="Znajdź spokój,&nbsp;który zawsze w&nbsp;Tobie był" data-en="Find the stillness&nbsp;that was always within you">Znajdź spokój,&nbsp;który zawsze w&nbsp;Tobie był</h1>
+  <p class="hero-sub" data-pl="Sesje Reiki w Warszawie — przywróć równowagę ciała i umysłu w bezpiecznej, pełnej troski przestrzeni." data-en="Reiki sessions in Warsaw — restore balance of body and mind in a safe, caring space.">Sesje Reiki w Warszawie — przywróć równowagę ciała i umysłu w bezpiecznej, pełnej troski przestrzeni.</p><!-- REPLACE: city -->
+  <a href="#booking" class="btn-primary">
+    <span data-pl="Zarezerwuj sesję" data-en="Book a Session">Zarezerwuj sesję</span>
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+  </a>
+  <div class="hero-scroll" aria-hidden="true">
+    <div class="hero-scroll-line"></div>
+    <span style="font-size:0.65rem; letter-spacing:0.12em;">scroll</span>
+  </div>
+</section>
+
+<!-- ── 3. What Is Reiki ── -->
+<section class="reiki-section fade-in" aria-labelledby="reiki-heading">
+  <div class="container">
+    <div class="reiki-inner">
+      <div class="reiki-text">
+        <h2 id="reiki-heading" data-pl="Czym jest Reiki?" data-en="What Is Reiki?">Czym jest Reiki?</h2>
+        <p data-pl="Reiki to japońska technika uzdrawiania energetycznego, która redukuje stres, wspiera głęboką relaksację i wzmacnia naturalne zdolności uzdrawiające ciała. Słowo Reiki pochodzi od japońskich słów Rei (mądrość Wszechświata) i Ki (energia życiowa)." data-en="Reiki is a Japanese technique of energy healing that reduces stress, supports deep relaxation, and strengthens the body's natural healing abilities. The word Reiki comes from the Japanese words Rei (universal wisdom) and Ki (life energy).">Reiki to japońska technika uzdrawiania energetycznego, która redukuje stres, wspiera głęboką relaksację i wzmacnia naturalne zdolności uzdrawiające ciała. Słowo Reiki pochodzi od japońskich słów Rei (mądrość Wszechświata) i Ki (energia życiowa).</p>
+        <p data-pl="Podczas sesji terapeuta delikatnie kładzie dłonie na lub tuż nad ciałem klienta, przekazując energię uzdrawiającą. Reiki jest bezpieczne dla każdego i doskonale uzupełnia konwencjonalne metody leczenia." data-en="During a session, the therapist gently places their hands on or just above the client's body, channeling healing energy. Reiki is safe for everyone and beautifully complements conventional medical treatment.">Podczas sesji terapeuta delikatnie kładzie dłonie na lub tuż nad ciałem klienta, przekazując energię uzdrawiającą. Reiki jest bezpieczne dla każdego i doskonale uzupełnia konwencjonalne metody leczenia.</p>
+      </div>
+      <div class="reiki-img-wrap">
+        <img src="DSC00556.JPG" alt="Reiki — energia i równowaga" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 4. Benefits ── -->
+<section class="benefits-section fade-in" aria-labelledby="benefits-heading">
+  <div class="container">
+    <div class="section-header">
+      <h2 id="benefits-heading" data-pl="Co zyskujesz" data-en="What You Gain">Co zyskujesz</h2>
+      <p data-pl="Sześć darów, które niesie Reiki" data-en="Six gifts that Reiki brings">Sześć darów, które niesie Reiki</p>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card fade-in">
+        <div class="benefit-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <h3 data-pl="Spokój wewnętrzny" data-en="Inner Peace">Spokój wewnętrzny</h3>
+        <p data-pl="Głęboka cisza pośrodku codziennego zgiełku. Poczucie, że jesteś w dobrym miejscu." data-en="Deep stillness amid everyday noise. A sense that you are exactly where you need to be.">Głęboka cisza pośrodku codziennego zgiełku. Poczucie, że jesteś w dobrym miejscu.</p>
+      </div>
+      <div class="benefit-card fade-in">
+        <div class="benefit-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h3 data-pl="Redukcja stresu" data-en="Stress Relief">Redukcja stresu</h3>
+        <p data-pl="Uwolnienie napięcia z ciała i umysłu. Reiki łagodzi kortyzol i przywraca równowagę układu nerwowego." data-en="Release tension from body and mind. Reiki soothes cortisol levels and restores nervous system balance.">Uwolnienie napięcia z ciała i umysłu. Reiki łagodzi kortyzol i przywraca równowagę układu nerwowego.</p>
+      </div>
+      <div class="benefit-card fade-in">
+        <div class="benefit-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3 data-pl="Lepsza jakość snu" data-en="Better Sleep">Lepsza jakość snu</h3>
+        <p data-pl="Głęboki, spokojny sen. Wielu klientów zauważa poprawę już po pierwszej sesji." data-en="Deep, restful sleep. Many clients notice improvement after the very first session.">Głęboki, spokojny sen. Wielu klientów zauważa poprawę już po pierwszej sesji.</p>
+      </div>
+      <div class="benefit-card fade-in">
+        <div class="benefit-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3 data-pl="Równowaga emocjonalna" data-en="Emotional Balance">Równowaga emocjonalna</h3>
+        <p data-pl="Harmonia uczuć i wewnętrzny spokój. Łatwiejsze zarządzanie emocjami w trudnych momentach." data-en="Harmony of feelings and inner calm. Easier to manage emotions in difficult moments.">Harmonia uczuć i wewnętrzny spokój. Łatwiejsze zarządzanie emocjami w trudnych momentach.</p>
+      </div>
+      <div class="benefit-card fade-in">
+        <div class="benefit-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <h3 data-pl="Energia i witalność" data-en="Energy &amp; Vitality">Energia i witalność</h3>
+        <p data-pl="Odświeżona energia życiowa. Czujesz się lżejszy, bardziej obecny i gotowy na nowe wyzwania." data-en="Renewed life energy. You feel lighter, more present, and ready for new challenges.">Odświeżona energia życiowa. Czujesz się lżejszy, bardziej obecny i gotowy na nowe wyzwania.</p>
+      </div>
+      <div class="benefit-card fade-in">
+        <div class="benefit-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
+        </div>
+        <h3 data-pl="Połączenie z sobą" data-en="Self-Connection">Połączenie z sobą</h3>
+        <p data-pl="Głębszy kontakt z własnym wnętrzem. Reiki pomaga usłyszeć własny głos pośród zewnętrznego hałasu." data-en="Deeper contact with your inner self. Reiki helps you hear your own voice amid external noise.">Głębszy kontakt z własnym wnętrzem. Reiki pomaga usłyszeć własny głos pośród zewnętrznego hałasu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 5. How a Session Works ── -->
+<section class="session-section fade-in" aria-labelledby="session-heading">
+  <div class="container">
+    <div class="section-header">
+      <h2 id="session-heading" data-pl="Jak wygląda sesja" data-en="How a Session Works">Jak wygląda sesja</h2>
+      <p data-pl="Trzy kroki ku wewnętrznemu spokojowi" data-en="Three steps toward inner peace">Trzy kroki ku wewnętrznemu spokojowi</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-step">
+        <div class="step-number" aria-hidden="true">01</div>
+        <div class="step-dot" aria-hidden="true"></div>
+        <h3 data-pl="Rozmowa wstępna" data-en="Initial Conversation">Rozmowa wstępna</h3>
+        <p data-pl="Rozmawiamy o Twoich potrzebach, oczekiwaniach i tym, co czujesz w danym momencie. Ta przestrzeń jest tylko dla Ciebie." data-en="We talk about your needs, expectations, and what you're feeling right now. This space is yours alone.">Rozmawiamy o Twoich potrzebach, oczekiwaniach i tym, co czujesz w danym momencie. Ta przestrzeń jest tylko dla Ciebie.</p>
+      </div>
+      <div class="timeline-step">
+        <div class="step-number" aria-hidden="true">02</div>
+        <div class="step-dot" aria-hidden="true"></div>
+        <h3 data-pl="Sesja Reiki" data-en="Reiki Session">Sesja Reiki</h3>
+        <p data-pl="Około 60 minut delikatnej pracy z energią Twojego ciała. Leżysz wygodnie ubrany — relaksuje się ciało i umysł." data-en="Around 60 minutes of gentle work with your body's energy. You lie comfortably clothed as body and mind relax.">Około 60 minut delikatnej pracy z energią Twojego ciała. Leżysz wygodnie ubrany — relaksuje się ciało i umysł.</p>
+      </div>
+      <div class="timeline-step">
+        <div class="step-number" aria-hidden="true">03</div>
+        <div class="step-dot" aria-hidden="true"></div>
+        <h3 data-pl="Omówienie i integracja" data-en="Debrief &amp; Integration">Omówienie i integracja</h3>
+        <p data-pl="Dzielimy się wrażeniami i omawiam wskazówki, które pomogą Ci utrzymać nową równowagę po sesji." data-en="We share impressions and I offer guidance to help you maintain your new equilibrium after the session.">Dzielimy się wrażeniami i omawiam wskazówki, które pomogą Ci utrzymać nową równowagę po sesji.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 6. Pricing ── -->
+<section class="pricing-section fade-in" aria-labelledby="pricing-heading">
+  <div class="container">
+    <div class="section-header">
+      <h2 id="pricing-heading" data-pl="Oferta i cennik" data-en="Services &amp; Pricing">Oferta i cennik</h2>
+      <p data-pl="Wybierz formę sesji dopasowaną do Twoich potrzeb" data-en="Choose the session format that suits your needs">Wybierz formę sesji dopasowaną do Twoich potrzeb</p>
+    </div>
+    <div class="pricing-grid">
+
+      <!-- Card 1: Distance -->
+      <div class="pricing-card fade-in">
+        <div class="pricing-card-img">
+          <img src="DSC08511.JPG" alt="Reiki na odległość — sylwetka w świetle" loading="lazy">
+        </div>
+        <p class="pricing-type" data-pl="Online · Na odległość" data-en="Online · Distance">Online · Na odległość</p>
+        <h3 class="pricing-title" data-pl="Sesja Reiki na odległość" data-en="Distance Reiki Session">Sesja Reiki na odległość</h3>
+        <p class="pricing-duration" data-pl="45 minut" data-en="45 minutes">45 minut</p>
+        <ul class="pricing-features">
+          <li data-pl="Sesja zdalna — z dowolnego miejsca" data-en="Remote session — from anywhere">Sesja zdalna — z dowolnego miejsca</li>
+          <li data-pl="Uwolnienie napięcia i stresu" data-en="Tension and stress release">Uwolnienie napięcia i stresu</li>
+          <li data-pl="Klarowność umysłu" data-en="Mental clarity">Klarowność umysłu</li>
+          <li data-pl="Omówienie wrażeń po sesji" data-en="Post-session debrief">Omówienie wrażeń po sesji</li>
+        </ul>
+        <div class="pricing-price">200 <span style="font-size:1.4rem;">zł</span></div>
+        <p class="pricing-price-note" data-pl="za sesję" data-en="per session">za sesję</p>
+        <a href="#booking" class="pricing-cta" data-pl="Umów sesję" data-en="Book a Session">Umów sesję</a>
+      </div>
+
+      <!-- Card 2: In-Person 1h — featured -->
+      <div class="pricing-card featured fade-in">
+        <div class="pricing-card-img">
+          <img src="DSC07538.JPG" alt="Sesja Reiki stacjonarna — sylwetka w ruchu" loading="lazy">
+        </div>
+        <span class="pricing-badge" data-pl="Najpopularniejsza" data-en="Most popular">Najpopularniejsza</span>
+        <p class="pricing-type" data-pl="Stacjonarnie · Warszawa" data-en="In-Person · Warsaw">Stacjonarnie · Warszawa</p>
+        <h3 class="pricing-title" data-pl="Sesja Reiki" data-en="Reiki Session">Sesja Reiki</h3>
+        <p class="pricing-duration" data-pl="60 minut" data-en="60 minutes">60 minut</p>
+        <ul class="pricing-features">
+          <li data-pl="Sesja stacjonarna w Warszawie" data-en="In-person session in Warsaw">Sesja stacjonarna w Warszawie</li>
+          <li data-pl="Rozmowa wstępna i integracja" data-en="Initial talk and integration">Rozmowa wstępna i integracja</li>
+          <li data-pl="Głęboka relaksacja i równowaga" data-en="Deep relaxation and balance">Głęboka relaksacja i równowaga</li>
+          <li data-pl="Wskazówki po sesji" data-en="Post-session guidance">Wskazówki po sesji</li>
+        </ul>
+        <div class="pricing-price">300 <span style="font-size:1.4rem;">zł</span></div>
+        <p class="pricing-price-note" data-pl="za sesję" data-en="per session">za sesję</p>
+        <a href="#booking" class="pricing-cta primary" data-pl="Zarezerwuj teraz" data-en="Book Now">Zarezerwuj teraz</a>
+      </div>
+
+      <!-- Card 3: Extended 1.5h -->
+      <div class="pricing-card fade-in">
+        <div class="pricing-card-img">
+          <img src="DSC08532.JPG" alt="Sesja rozszerzona Reiki — medytacja w ciszy" loading="lazy">
+        </div>
+        <p class="pricing-type" data-pl="Stacjonarnie · Warszawa" data-en="In-Person · Warsaw">Stacjonarnie · Warszawa</p>
+        <h3 class="pricing-title" data-pl="Sesja rozszerzona" data-en="Extended Session">Sesja rozszerzona</h3>
+        <p class="pricing-duration" data-pl="90 minut" data-en="90 minutes">90 minut</p>
+        <ul class="pricing-features">
+          <li data-pl="Sesja stacjonarna w Warszawie" data-en="In-person session in Warsaw">Sesja stacjonarna w Warszawie</li>
+          <li data-pl="Pogłębiona praca z energią ciała" data-en="Deep energy body work">Pogłębiona praca z energią ciała</li>
+          <li data-pl="Więcej czasu na integrację" data-en="More time for integration">Więcej czasu na integrację</li>
+          <li data-pl="Spersonalizowane zalecenia" data-en="Personalised recommendations">Spersonalizowane zalecenia</li>
+        </ul>
+        <div class="pricing-price">400 <span style="font-size:1.4rem;">zł</span></div>
+        <p class="pricing-price-note" data-pl="za sesję" data-en="per session">za sesję</p>
+        <a href="#booking" class="pricing-cta" data-pl="Umów sesję" data-en="Book a Session">Umów sesję</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── 7. About Me ── -->
+<section class="about-section fade-in" aria-labelledby="about-heading">
+  <div class="container">
+    <div class="about-inner">
+      <div class="about-photo-wrap">
+        <div class="about-photo">
+          <img src="DSC00564.JPG" alt="Katarzyna Jaworska">
+        </div>
+      </div>
+      <div class="about-text">
+        <p class="eyebrow" data-pl="O mnie" data-en="About Me">O mnie</p>
+        <h2 id="about-heading">Katarzyna Jaworska</h2><!-- REPLACE: practitioner name -->
+        <p data-pl="Jestem certyfikowaną terapeutką Reiki II stopnia z pasją do towarzyszenia ludziom w drodze ku wewnętrznemu spokojowi. Wierzę, że każdy z nas nosi w sobie zdolność do uzdrawiania — czasem potrzeba tylko przestrzeni i ciszy, by ją odnaleźć." data-en="I am a certified Reiki Level II therapist with a passion for accompanying people on their journey toward inner peace. I believe that each of us carries the capacity for healing within — sometimes all we need is space and stillness to find it.">Jestem certyfikowaną terapeutką Reiki II stopnia z pasją do towarzyszenia ludziom w drodze ku wewnętrznemu spokojowi. Wierzę, że każdy z nas nosi w sobie zdolność do uzdrawiania — czasem potrzeba tylko przestrzeni i ciszy, by ją odnaleźć.</p><!-- REPLACE: bio -->
+        <p data-pl="Praktykuję Reiki od ponad 5 lat. Moje sesje odbywają się w spokojnej, bezpiecznej przestrzeni w centrum Warszawy. Przyjmuję zarówno doświadczonych praktyków, jak i osoby zupełnie nowe w świecie energetycznych metod pracy." data-en="I have been practising Reiki for over 5 years. My sessions take place in a calm, safe space in central Warsaw. I welcome both experienced practitioners and those completely new to the world of energy work.">Praktykuję Reiki od ponad 5 lat. Moje sesje odbywają się w spokojnej, bezpiecznej przestrzeni w centrum Warszawy. Przyjmuję zarówno doświadczonych praktyków, jak i osoby zupełnie nowe w świecie energetycznych metod pracy.</p><!-- REPLACE: bio details -->
+        <div class="about-certs">
+          <span class="cert-badge" data-pl="Reiki II stopień" data-en="Reiki Level II">Reiki II stopień</span><!-- REPLACE: certifications -->
+          <span class="cert-badge" data-pl="Certyfikowana terapeutka" data-en="Certified Therapist">Certyfikowana terapeutka</span>
+          <span class="cert-badge" data-pl="Warszawa" data-en="Warsaw">Warszawa</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 7. Testimonials ── -->
+<section class="testimonials-section fade-in" aria-labelledby="testimonials-heading">
+  <div class="container">
+    <div class="section-header">
+      <h2 id="testimonials-heading" data-pl="Co mówią klienci" data-en="What Clients Say">Co mówią klienci</h2>
+      <p data-pl="Prawdziwe doświadczenia, prawdziwe zmiany" data-en="Real experiences, real changes">Prawdziwe doświadczenia, prawdziwe zmiany</p>
+    </div>
+    <div class="testimonials-track-wrap" id="testimonialsTrack">
+    <div class="testimonials-grid">
+      <div class="testimonial-card fade-in">
+        <div class="testimonial-quote" aria-hidden="true">"</div>
+        <div class="testimonial-stars" aria-label="5 gwiazdek">★★★★★</div>
+        <p data-pl="Po pierwszej sesji poczułam się jakby kamień spadł mi z serca. Napięcie, które nosiłam latami, po prostu zniknęło. Katarzyna stworzyła przestrzeń pełną ciepła i bezpieczeństwa." data-en="After the first session I felt as though a stone had fallen from my heart. The tension I had carried for years simply vanished. Katarzyna created a space full of warmth and safety.">Po pierwszej sesji poczułam się jakby kamień spadł mi z serca. Napięcie, które nosiłam latami, po prostu zniknęło. Katarzyna stworzyła przestrzeń pełną ciepła i bezpieczeństwa.</p>
+        <div class="testimonial-name">— Marta W.</div><!-- REPLACE: real testimonials when available -->
+      </div>
+      <div class="testimonial-card fade-in">
+        <div class="testimonial-quote" aria-hidden="true">"</div>
+        <div class="testimonial-stars" aria-label="5 gwiazdek">★★★★★</div>
+        <p data-pl="Byłem sceptyczny, ale Katarzyna stworzyła przestrzeń tak bezpieczną, że po prostu odpuściłem. Śpię teraz znacznie lepiej i nie pamiętam, kiedy ostatnio byłem tak spokojny." data-en="I was sceptical, but Katarzyna created such a safe space that I simply let go. I sleep much better now and cannot remember the last time I felt this calm.">Byłem sceptyczny, ale Katarzyna stworzyła przestrzeń tak bezpieczną, że po prostu odpuściłem. Śpię teraz znacznie lepiej i nie pamiętam, kiedy ostatnio byłem tak spokojny.</p>
+        <div class="testimonial-name">— Tomasz K.</div>
+      </div>
+      <div class="testimonial-card fade-in">
+        <div class="testimonial-quote" aria-hidden="true">"</div>
+        <div class="testimonial-stars" aria-label="5 gwiazdek">★★★★★</div>
+        <p data-pl="Wróciłam po trzech sesjach. Każda przyniosła mi coś innego — i coś bardzo potrzebnego. Polecam każdemu, kto szuka spokoju w tym hałaśliwym świecie." data-en="I came back for three sessions. Each brought me something different — and something deeply needed. I recommend it to anyone seeking calm in this noisy world.">Wróciłam po trzech sesjach. Każda przyniosła mi coś innego — i coś bardzo potrzebnego. Polecam każdemu, kto szuka spokoju w tym hałaśliwym świecie.</p>
+        <div class="testimonial-name">— Karolina M.</div>
+      </div>
+      <div class="testimonial-card fade-in">
+        <div class="testimonial-quote" aria-hidden="true">"</div>
+        <div class="testimonial-stars" aria-label="5 gwiazdek">★★★★★</div>
+        <p data-pl="Przyszłam z chronicznym bólem głowy i niepokojem. Po czterech sesjach obie dolegliwości znacznie się zmniejszyły. Nie spodziewałam się aż takich efektów — jestem pod wrażeniem." data-en="I came with chronic headaches and anxiety. After four sessions both ailments decreased significantly. I did not expect such results — I am truly impressed.">Przyszłam z chronicznym bólem głowy i niepokojem. Po czterech sesjach obie dolegliwości znacznie się zmniejszyły. Nie spodziewałam się aż takich efektów — jestem pod wrażeniem.</p>
+        <div class="testimonial-name">— Agnieszka R.</div>
+      </div>
+      <div class="testimonial-card fade-in">
+        <div class="testimonial-quote" aria-hidden="true">"</div>
+        <div class="testimonial-stars" aria-label="5 gwiazdek">★★★★★</div>
+        <p data-pl="Korzystam z sesji online — mieszkam poza Warszawą, a jakość jest dokładnie taka sama jak przy sesjach stacjonarnych, które miałem wcześniej. Ciepło polecam każdemu, kto się waha." data-en="I use online sessions — I live outside Warsaw, and the quality is exactly the same as the in-person sessions I had before. I warmly recommend it to anyone who is hesitating.">Korzystam z sesji online — mieszkam poza Warszawą, a jakość jest dokładnie taka sama jak przy sesjach stacjonarnych, które miałem wcześniej. Ciepło polecam każdemu, kto się waha.</p>
+        <div class="testimonial-name">— Piotr N.</div>
+      </div>
+      <div class="testimonial-card fade-in">
+        <div class="testimonial-quote" aria-hidden="true">"</div>
+        <div class="testimonial-stars" aria-label="5 gwiazdek">★★★★★</div>
+        <p data-pl="Sesja rozszerzona to zupełnie inne doświadczenie — miałam czas naprawdę opaść, bez pośpiechu. Wyszłam jakby kilka kilogramów lżejsza. Na pewno wrócę." data-en="The extended session is a completely different experience — I had time to truly unwind, without any rush. I left feeling several kilograms lighter. I will definitely be back.">Sesja rozszerzona to zupełnie inne doświadczenie — miałam czas naprawdę opaść, bez pośpiechu. Wyszłam jakby kilka kilogramów lżejsza. Na pewno wrócę.</p>
+        <div class="testimonial-name">— Joanna S.</div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 8. FAQ ── -->
+<section class="faq-section fade-in" aria-labelledby="faq-heading">
+  <div class="container">
+    <div class="section-header">
+      <h2 id="faq-heading" data-pl="Często zadawane pytania" data-en="Frequently Asked Questions">Często zadawane pytania</h2>
+      <p data-pl="Odpowiedzi na pytania, które słyszę najczęściej" data-en="Answers to the questions I hear most often">Odpowiedzi na pytania, które słyszę najczęściej</p>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          <span class="faq-question" data-pl="Czy muszę wierzyć w Reiki, żeby działało?" data-en="Do I need to believe in Reiki for it to work?">Czy muszę wierzyć w Reiki, żeby działało?</span>
+          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
+        </button>
+        <div class="faq-body"><div class="faq-body-inner">
+          <p class="faq-answer" data-pl="Nie. Reiki działa niezależnie od przekonań — tak jak grawitacja nie wymaga wiary, żeby istnieć. Wystarczy otwartość i gotowość do odpoczynku. Wielu sceptycznych klientów po pierwszej sesji było zaskoczonych tym, co poczuli." data-en="No. Reiki works independently of belief — just as gravity doesn't require faith to exist. All that's needed is openness and willingness to rest. Many sceptical clients were surprised by what they felt after their first session.">Nie. Reiki działa niezależnie od przekonań — tak jak grawitacja nie wymaga wiary, żeby istnieć. Wystarczy otwartość i gotowość do odpoczynku. Wielu sceptycznych klientów po pierwszej sesji było zaskoczonych tym, co poczuli.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          <span class="faq-question" data-pl="Co mogę poczuć podczas sesji?" data-en="What might I feel during a session?">Co mogę poczuć podczas sesji?</span>
+          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
+        </button>
+        <div class="faq-body"><div class="faq-body-inner">
+          <p class="faq-answer" data-pl="Każdy doświadcza sesji inaczej. Najczęściej klienci opisują ciepło lub delikatne mrowienie w ciele, głęboką relaksację, a niekiedy zasypiają. Niektórzy widzą kolory lub obrazy. Wszystkie odczucia — łącznie z brakiem jakichkolwiek — są całkowicie normalne." data-en="Everyone experiences a session differently. Most commonly clients describe warmth or a gentle tingling, deep relaxation, and sometimes falling asleep. Some see colours or images. All sensations — including feeling nothing at all — are completely normal.">Każdy doświadcza sesji inaczej. Najczęściej klienci opisują ciepło lub delikatne mrowienie w ciele, głęboką relaksację, a niekiedy zasypiają. Niektórzy widzą kolory lub obrazy. Wszystkie odczucia — łącznie z brakiem jakichkolwiek — są całkowicie normalne.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          <span class="faq-question" data-pl="Ile sesji potrzebuję?" data-en="How many sessions do I need?">Ile sesji potrzebuję?</span>
+          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
+        </button>
+        <div class="faq-body"><div class="faq-body-inner">
+          <p class="faq-answer" data-pl="Jedna sesja wystarczy, by poczuć różnicę. Dla głębszych, trwałych efektów zalecam serię 3–5 sesji w odstępach 1–2 tygodni. Wspólnie ustalimy rytm dopasowany do Twoich potrzeb — nie ma jednej odpowiedzi dla wszystkich." data-en="One session is enough to feel a difference. For deeper, lasting results I recommend a series of 3–5 sessions spaced 1–2 weeks apart. Together we'll set a pace that suits your needs — there is no single answer for everyone.">Jedna sesja wystarczy, by poczuć różnicę. Dla głębszych, trwałych efektów zalecam serię 3–5 sesji w odstępach 1–2 tygodni. Wspólnie ustalimy rytm dopasowany do Twoich potrzeb — nie ma jednej odpowiedzi dla wszystkich.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          <span class="faq-question" data-pl="Jak się przygotować do sesji?" data-en="How should I prepare for a session?">Jak się przygotować do sesji?</span>
+          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
+        </button>
+        <div class="faq-body"><div class="faq-body-inner">
+          <p class="faq-answer" data-pl="Ubierz się wygodnie — nie musisz się rozbierać, sesja odbywa się w ubraniu. Przed przyjściem zjedz lekki posiłek i nawodnij się. Warto odstawić telefon i przyjść kilka minut wcześniej, żeby spokojnie wejść w przestrzeń sesji." data-en="Dress comfortably — you do not undress; the session takes place fully clothed. Eat a light meal and hydrate before arriving. It helps to set your phone aside and arrive a few minutes early so you can settle gently into the session space.">Ubierz się wygodnie — nie musisz się rozbierać, sesja odbywa się w ubraniu. Przed przyjściem zjedz lekki posiłek i nawodnij się. Warto odstawić telefon i przyjść kilka minut wcześniej, żeby spokojnie wejść w przestrzeń sesji.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          <span class="faq-question" data-pl="Czy Reiki zastępuje leczenie medyczne?" data-en="Does Reiki replace medical treatment?">Czy Reiki zastępuje leczenie medyczne?</span>
+          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
+        </button>
+        <div class="faq-body"><div class="faq-body-inner">
+          <p class="faq-answer" data-pl="Nie. Reiki jest metodą komplementarną — wspiera, ale nie zastępuje opieki lekarskiej. Doskonale współgra z konwencjonalnymi metodami leczenia, chemioterapią, psychoterapią czy rehabilitacją, pomagając ciału i umysłowi łatwiej przechodzić przez te procesy." data-en="No. Reiki is a complementary method — it supports but does not replace medical care. It works beautifully alongside conventional treatments, chemotherapy, psychotherapy, or rehabilitation, helping the body and mind move through those processes more easily.">Nie. Reiki jest metodą komplementarną — wspiera, ale nie zastępuje opieki lekarskiej. Doskonale współgra z konwencjonalnymi metodami leczenia, chemioterapią, psychoterapią czy rehabilitacją, pomagając ciału i umysłowi łatwiej przechodzić przez te procesy.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          <span class="faq-question" data-pl="Czy Reiki jest bezpieczne w ciąży?" data-en="Is Reiki safe during pregnancy?">Czy Reiki jest bezpieczne w ciąży?</span>
+          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
+        </button>
+        <div class="faq-body"><div class="faq-body-inner">
+          <p class="faq-answer" data-pl="Tak. Reiki jest łagodne i nieinwazyjne, dlatego uznaje się je za bezpieczne w każdym trymestrze. Wiele przyszłych mam korzysta z sesji, by redukować stres, poprawić jakość snu i utrzymać wewnętrzną równowagę w czasie ciąży. Zawsze warto poinformować terapeutkę o swoim stanie." data-en="Yes. Reiki is gentle and non-invasive and is considered safe throughout all trimesters. Many expectant mothers use sessions to reduce stress, improve sleep quality, and maintain inner balance during pregnancy. Always let your therapist know about your condition.">Tak. Reiki jest łagodne i nieinwazyjne, dlatego uznaje się je za bezpieczne w każdym trymestrze. Wiele przyszłych mam korzysta z sesji, by redukować stres, poprawić jakość snu i utrzymać wewnętrzną równowagę w czasie ciąży. Zawsze warto poinformować terapeutkę o swoim stanie.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          <span class="faq-question" data-pl="Czy Reiki może wywołać kryzys uzdrawiający?" data-en="Can Reiki trigger a healing crisis?">Czy Reiki może wywołać kryzys uzdrawiający?</span>
+          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
+        </button>
+        <div class="faq-body"><div class="faq-body-inner">
+          <p class="faq-answer" data-pl="Rzadko, ale zdarza się, że po sesji przez dzień lub dwa czujesz wzmożone emocje, senność lub delikatny ból głowy. To naturalny znak, że ciało i umysł przechodzą przez proces oczyszczenia. Pij dużo wody, odpocznij — te odczucia szybko mijają." data-en="Rarely, but sometimes for a day or two after a session you may feel heightened emotions, drowsiness, or a mild headache. This is a natural sign that body and mind are moving through a cleansing process. Drink plenty of water, rest — these feelings pass quickly.">Rzadko, ale zdarza się, że po sesji przez dzień lub dwa czujesz wzmożone emocje, senność lub delikatny ból głowy. To naturalny znak, że ciało i umysł przechodzą przez proces oczyszczenia. Pij dużo wody, odpocznij — te odczucia szybko mijają.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false">
+          <span class="faq-question" data-pl="Czy mogę skorzystać z sesji online?" data-en="Can I have an online session?">Czy mogę skorzystać z sesji online?</span>
+          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
+        </button>
+        <div class="faq-body"><div class="faq-body-inner">
+          <p class="faq-answer" data-pl="Tak. Reiki na odległość działa równie skutecznie jak sesja stacjonarna — energia nie zna barier przestrzennych. Sesja online przebiega podobnie: umawiamy się na godzinę, Ty odpoczywasz w wygodnym miejscu, a ja przesyłam energię. Po sesji rozmawiamy o wrażeniach." data-en="Yes. Distance Reiki works just as effectively as an in-person session — energy knows no spatial boundaries. An online session unfolds similarly: we agree on a time, you rest in a comfortable place, and I send the energy. Afterwards we talk about your impressions.">Tak. Reiki na odległość działa równie skutecznie jak sesja stacjonarna — energia nie zna barier przestrzennych. Sesja online przebiega podobnie: umawiamy się na godzinę, Ty odpoczywasz w wygodnym miejscu, a ja przesyłam energię. Po sesji rozmawiamy o wrażeniach.</p>
+        </div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── 9. Booking / Contact Form ── -->
+<section id="booking" class="booking-section fade-in" aria-labelledby="booking-heading">
+  <div class="container">
+    <div class="booking-inner">
+      <div class="booking-left">
+        <h2 id="booking-heading" data-pl="Zarezerwuj swoją sesję" data-en="Book Your Session">Zarezerwuj swoją sesję</h2>
+        <p class="sub" data-pl="Napisz do mnie lub zadzwoń — odpowiadam w ciągu 24 godzin." data-en="Write to me or call — I reply within 24 hours.">Napisz do mnie lub zadzwoń — odpowiadam w ciągu 24 godzin.</p>
+
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <a href="mailto:kasia@reiki-warszawa.pl">kasia@reiki-warszawa.pl</a><!-- REPLACE: practitioner email -->
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.6 19.79 19.79 0 0 1 1.61 5.05 2 2 0 0 1 3.59 2.87h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.77-.77a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17z"/></svg>
+          </div>
+          <a href="tel:+48519389216">+48 519 389 216</a>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <span data-pl="Warszawa, Polska" data-en="Warsaw, Poland">Warszawa, Polska</span><!-- REPLACE: full address if desired -->
+        </div>
+      </div>
+
+      <div>
+        <form class="booking-form" id="bookingForm" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="fname" data-pl="Imię i nazwisko" data-en="Full Name">Imię i nazwisko</label>
+              <input type="text" id="fname" name="name" autocomplete="name" required
+                data-placeholder-pl="Katarzyna Nowak" data-placeholder-en="Jane Smith"
+                placeholder="Katarzyna Nowak">
+            </div>
+            <div class="form-field">
+              <label for="femail" data-pl="Adres email" data-en="Email Address">Adres email</label>
+              <input type="email" id="femail" name="email" autocomplete="email" required
+                placeholder="email@domena.pl">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="fphone" data-pl="Telefon (opcjonalnie)" data-en="Phone (optional)">Telefon (opcjonalnie)</label>
+              <input type="tel" id="fphone" name="phone" autocomplete="tel"
+                placeholder="+48 600 000 000">
+            </div>
+            <div class="form-field">
+              <label for="fsubject" data-pl="Temat" data-en="Subject">Temat</label>
+              <input type="text" id="fsubject" name="subject"
+                data-placeholder-pl="Pierwsza sesja" data-placeholder-en="First session"
+                placeholder="Pierwsza sesja">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field full">
+              <label for="fmessage" data-pl="Wiadomość" data-en="Message">Wiadomość</label>
+              <textarea id="fmessage" name="message" rows="5" required
+                data-placeholder-pl="Powiedz mi kilka słów o sobie i o tym, czego szukasz..." data-placeholder-en="Tell me a little about yourself and what you're looking for..."
+                placeholder="Powiedz mi kilka słów o sobie i o tym, czego szukasz..."></textarea>
+            </div>
+          </div>
+          <button type="submit" class="form-submit">
+            <span data-pl="Wyślij wiadomość" data-en="Send Message">Wyślij wiadomość</span>
+          </button>
+        </form>
+
+        <div class="booking-thankyou" id="bookingThankyou" hidden>
+          <h3 data-pl="Dziękuję!" data-en="Thank you!">Dziękuję!</h3>
+          <p data-pl="Dziękuję za wiadomość! Odezwę się w ciągu 24 godzin." data-en="Thank you for your message! I'll get back to you within 24 hours.">Dziękuję za wiadomość! Odezwę się w ciągu 24 godzin.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 10. Instagram ── -->
+<section class="instagram-section fade-in" aria-labelledby="instagram-heading">
+  <div class="container">
+    <div class="instagram-header">
+      <div class="instagram-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </div>
+      <p class="instagram-handle" id="instagram-heading">@lettinggoofadream</p>
+      <p class="instagram-sub" data-pl="Codzienne inspiracje o Reiki, energii i wewnętrznym spokoju" data-en="Daily inspiration about Reiki, energy and inner peace">Codzienne inspiracje o Reiki, energii i wewnętrznym spokoju</p>
+    </div>
+
+    <div class="instagram-grid">
+      <a href="https://www.instagram.com/lettinggoofadream/" target="_blank" rel="noopener" class="instagram-post" aria-label="Instagram">
+        <img src="DSC08523.JPG" alt="Reiki – sesja uzdrawiania" loading="lazy">
+        <div class="instagram-post-overlay" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+      </a>
+      <a href="https://www.instagram.com/lettinggoofadream/" target="_blank" rel="noopener" class="instagram-post" aria-label="Instagram">
+        <img src="branch-lilac-flowers-with-green-leaves-floral-natural-background-soft-focus.jpg" alt="Kwiaty bzu – natura i spokój" loading="lazy">
+        <div class="instagram-post-overlay" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+      </a>
+      <a href="https://www.instagram.com/lettinggoofadream/" target="_blank" rel="noopener" class="instagram-post" aria-label="Instagram">
+        <img src="abstract-image-peacock-feather-with-water-drop.jpg" alt="Pióro pawia – energia czakr" loading="lazy">
+        <div class="instagram-post-overlay" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+      </a>
+      <a href="https://www.instagram.com/lettinggoofadream/" target="_blank" rel="noopener" class="instagram-post" aria-label="Instagram">
+        <img src="intricate-closeup-seashell-showcasing-natural-spirals-pastel-tones.jpg" alt="Muszla – naturalne spirale energii" loading="lazy">
+        <div class="instagram-post-overlay" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+      </a>
+      <a href="https://www.instagram.com/lettinggoofadream/" target="_blank" rel="noopener" class="instagram-post" aria-label="Instagram">
+        <img src="purple-spear-thistle-flower-blurred-field.jpg" alt="Oset – piękno natury" loading="lazy">
+        <div class="instagram-post-overlay" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+      </a>
+      <a href="https://www.instagram.com/lettinggoofadream/" target="_blank" rel="noopener" class="instagram-post" aria-label="Instagram">
+        <img src="rainbow_flowing_waves_abstract_banner_design_0507.jpg" alt="Tęczowe fale – przepływ energii" loading="lazy">
+        <div class="instagram-post-overlay" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+      </a>
+    </div>
+
+    <div class="instagram-follow">
+      <a href="https://www.instagram.com/lettinggoofadream/" target="_blank" rel="noopener" class="instagram-btn">
+        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        <span data-pl="Obserwuj na Instagramie" data-en="Follow on Instagram">Obserwuj na Instagramie</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── 11. Footer ── -->
+<footer class="footer" aria-label="Stopka">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-name">Katarzyna Jaworska</div><!-- REPLACE: practitioner name -->
+        <div class="footer-tagline" data-pl="Warszawa · Ciało i umysł w równowadze" data-en="Warsaw · Body and mind in balance">Warszawa · Ciało i umysł w równowadze</div><!-- REPLACE: city -->
+      </div>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/lettinggoofadream/" class="footer-social" aria-label="Instagram" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+      </div>
+      <div class="footer-copy" data-pl="© 2025 Katarzyna Jaworska Reiki" data-en="© 2025 Katarzyna Jaworska Reiki">© 2025 Katarzyna Jaworska Reiki</div><!-- REPLACE: name + year -->
+    </div>
+    <div class="footer-bottom" data-pl="Sesje Reiki w Warszawie · Stworzone z troską" data-en="Reiki Sessions in Warsaw · Made with care">Sesje Reiki w Warszawie · Stworzone z troską</div>
+  </div>
+</footer>
+
+<!-- WhatsApp floating button -->
+<a href="https://wa.me/48519389216" class="wa-float" aria-label="Napisz na WhatsApp" target="_blank" rel="noopener"><!-- REPLACE: phone number -->
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ── Language toggle ── */
+  var currentLang = localStorage.getItem('lang') || 'pl';
+
+  function setLang(lang) {
+    document.querySelectorAll('[data-pl]').forEach(function (el) {
+      el.textContent = el.dataset[lang];
+    });
+    /* Update placeholder attributes separately (not text content) */
+    document.querySelectorAll('[data-placeholder-pl]').forEach(function (el) {
+      el.placeholder = lang === 'pl' ? el.dataset.placeholderPl : el.dataset.placeholderEn;
+    });
+    document.documentElement.lang = lang;
+    localStorage.setItem('lang', lang);
+    currentLang = lang;
+    /* Update toggle button visual */
+    var plEl = document.getElementById('langPL');
+    var enEl = document.getElementById('langEN');
+    if (plEl && enEl) {
+      plEl.style.color = lang === 'pl' ? 'var(--color-accent)' : 'var(--color-text-light)';
+      enEl.style.color = lang === 'en' ? 'var(--color-accent)' : 'var(--color-text-light)';
+    }
+  }
+
+  var toggle = document.getElementById('langToggle');
+  if (toggle) {
+    toggle.addEventListener('click', function () {
+      setLang(currentLang === 'pl' ? 'en' : 'pl');
+    });
+  }
+
+  /* Apply saved language on load */
+  setLang(currentLang);
+
+  /* ── Scroll-triggered fade-in ── */
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.fade-in').forEach(function (el) {
+      observer.observe(el);
+    });
+  } else {
+    /* Fallback: show everything immediately */
+    document.querySelectorAll('.fade-in').forEach(function (el) {
+      el.classList.add('visible');
+    });
+  }
+
+  /* ── Testimonials drag-to-scroll ── */
+  var track = document.getElementById('testimonialsTrack');
+  if (track) {
+    var isDown = false, startX, scrollLeft;
+    track.addEventListener('mousedown', function (e) {
+      isDown = true;
+      startX = e.pageX - track.offsetLeft;
+      scrollLeft = track.scrollLeft;
+    });
+    track.addEventListener('mouseleave', function () { isDown = false; });
+    track.addEventListener('mouseup', function () { isDown = false; });
+    track.addEventListener('mousemove', function (e) {
+      if (!isDown) return;
+      e.preventDefault();
+      var x = e.pageX - track.offsetLeft;
+      track.scrollLeft = scrollLeft - (x - startX) * 1.2;
+    });
+  }
+
+  /* ── FAQ accordion ── */
+  document.querySelectorAll('.faq-trigger').forEach(function (trigger) {
+    trigger.addEventListener('click', function () {
+      var item = trigger.closest('.faq-item');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function (el) {
+        el.classList.remove('open');
+        el.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  /* ── Contact form submit ── */
+  var form = document.getElementById('bookingForm');
+  var thankyou = document.getElementById('bookingThankyou');
+  if (form && thankyou) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      form.hidden = true;
+      thankyou.hidden = false;
+      /* Re-apply current language to newly visible block */
+      setLang(localStorage.getItem('lang') || 'pl');
+    });
+  }
+})();
+</script>
+</body>
+</html>
