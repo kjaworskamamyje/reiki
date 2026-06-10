@@ -1462,6 +1462,60 @@ button, input, textarea, select {
 .bk-back svg { width: 12px; height: 12px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; }
 .bk-btn { width: auto; padding: 13px 36px; }
 
+.bk-terms {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 20px 0 8px;
+  padding: 16px 18px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+}
+
+.bk-terms input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  cursor: pointer;
+  margin-top: 2px;
+  position: relative;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.bk-terms input[type="checkbox"]:checked {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.bk-terms input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  left: 4px; top: 1px;
+  width: 7px; height: 11px;
+  border: 2px solid #fff;
+  border-top: none; border-left: none;
+  transform: rotate(45deg);
+}
+
+.bk-terms label {
+  font-size: 0.82rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
+  cursor: pointer;
+}
+
+.bk-terms label a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.bk-terms label a:hover { color: var(--color-gold); }
+
 .bk-confirm { text-align: center; padding: 40px 0; }
 .bk-confirm-icon {
   width: 60px; height: 60px; border-radius: 50%;
@@ -2145,11 +2199,17 @@ button, input, textarea, select {
               <input type="text" id="bkMsg" name="message" placeholder="Coś, co chcesz mi przekazać...">
             </div>
           </div>
-          <div class="bk-nav" style="margin-top:24px;">
+          <div class="bk-terms">
+            <input type="checkbox" id="bkTerms">
+            <label for="bkTerms">
+              Zapoznałam/-em się z <a href="regulamin.html" target="_blank">Regulaminem</a> i <a href="polityka-prywatnosci.html" target="_blank">Polityką prywatności</a> i akceptuję ich postanowienia. *
+            </label>
+          </div>
+          <div class="bk-nav" style="margin-top:16px;">
             <button type="button" class="bk-back" id="bkBack4">
               <svg viewBox="0 0 12 12"><path d="M8 2L4 6l4 4"/></svg> Wróć
             </button>
-            <button type="submit" class="form-submit bk-btn" id="bkSubmit">Przejdź do płatności →</button>
+            <button type="submit" class="form-submit bk-btn" id="bkSubmit" disabled>Przejdź do płatności →</button>
           </div>
         </form>
       </div>
@@ -2694,6 +2754,11 @@ button, input, textarea, select {
   document.getElementById('bkBack3').addEventListener('click', function() { showPanel(2); renderCal(); });
   document.getElementById('bkNext3').addEventListener('click', function() { showPanel(4); });
   document.getElementById('bkBack4').addEventListener('click', function() { showPanel(3); renderSlots(); });
+
+  /* Terms checkbox — unlock submit button */
+  document.getElementById('bkTerms').addEventListener('change', function() {
+    document.getElementById('bkSubmit').disabled = !this.checked;
+  });
 
   /* Calendar month navigation */
   document.getElementById('bkCalPrev').addEventListener('click', function() {
