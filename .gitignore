@@ -2,4 +2,7 @@
 .claude/
 CLAUDE.md
 serve.py
+server.py
 originals/
+__pycache__/
+*.pyc

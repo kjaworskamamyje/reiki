@@ -1405,6 +1405,68 @@ button, input, textarea, select {
   .bk-step-txt { display: none; }
 }
 
+/* ── Płatność P24 ── */
+.bk-payment-box {
+  border: 1px solid var(--color-border);
+  padding: 36px 32px;
+  margin-bottom: 28px;
+  text-align: center;
+}
+.bk-payment-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+  margin-bottom: 8px;
+}
+.bk-payment-total {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: var(--color-text);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.bk-payment-desc {
+  font-size: 0.87rem;
+  color: var(--color-text-light);
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+.bk-p24-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  background: #D4145A;
+  color: #fff;
+  border: none;
+  padding: 16px;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.87rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-bottom: 14px;
+}
+.bk-p24-btn:hover  { background: #b8104e; }
+.bk-p24-btn:disabled { opacity: 0.6; cursor: default; }
+.bk-payment-secure {
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.bk-payment-secure svg {
+  width: 12px; height: 12px;
+  stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round;
+}
+
 /* ── WhatsApp float ── */
 .wa-float {
   position: fixed;
@@ -1894,6 +1956,11 @@ button, input, textarea, select {
           <div class="bk-step-num">4</div>
           <div class="bk-step-txt">Dane</div>
         </div>
+        <div class="bk-connector"></div>
+        <div class="bk-step-label" id="bkStepL5">
+          <div class="bk-step-num">5</div>
+          <div class="bk-step-txt">Płatność</div>
+        </div>
       </div>
 
       <!-- Summary bar (visible from step 2 onwards) -->
@@ -1997,9 +2064,31 @@ button, input, textarea, select {
             <button type="button" class="bk-back" id="bkBack4">
               <svg viewBox="0 0 12 12"><path d="M8 2L4 6l4 4"/></svg> Wróć
             </button>
-            <button type="submit" class="form-submit bk-btn" id="bkSubmit">Zarezerwuj sesję</button>
+            <button type="submit" class="form-submit bk-btn" id="bkSubmit">Przejdź do płatności →</button>
           </div>
         </form>
+      </div>
+
+      <!-- Panel 5: Płatność (Przelewy24) -->
+      <div class="bk-panel hidden" id="bkPanel5">
+        <div class="bk-payment-box">
+          <p class="bk-payment-label">Do zapłaty</p>
+          <div class="bk-payment-total" id="bkPayTotal"></div>
+          <p class="bk-payment-desc" id="bkPayDesc"></p>
+          <button class="bk-p24-btn" id="bkPayBtn" type="button">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+            Zapłać przez Przelewy24
+          </button>
+          <p class="bk-payment-secure">
+            <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Bezpieczna płatność — Przelewy24
+          </p>
+        </div>
+        <div class="bk-nav">
+          <button class="bk-back" id="bkBack5" type="button">
+            <svg viewBox="0 0 12 12"><path d="M8 2L4 6l4 4"/></svg> Wróć
+          </button>
+        </div>
       </div>
 
       <!-- Confirmation screen -->
@@ -2268,7 +2357,7 @@ button, input, textarea, select {
 
   /* ── Step navigation ── */
   function showPanel(n) {
-    for (var i=1; i<=4; i++) {
+    for (var i=1; i<=5; i++) {
       document.getElementById('bkPanel'+i).classList.toggle('hidden', i!==n);
       document.getElementById('bkStepL'+i).classList.toggle('active', i===n);
       document.getElementById('bkStepL'+i).classList.toggle('done',   i<n);
@@ -2457,7 +2546,7 @@ button, input, textarea, select {
     renderCal();
   });
 
-  /* Form submit */
+  /* Form submit → przejdź do kroku płatności */
   document.getElementById('bkForm').addEventListener('submit', function(e) {
     e.preventDefault();
     var nEl = document.getElementById('bkName');
@@ -2473,12 +2562,140 @@ button, input, textarea, select {
     bk.clientPhone = document.getElementById('bkPhone').value.trim();
     bk.clientMsg   = document.getElementById('bkMsg').value.trim();
 
-    var sub = document.getElementById('bkSubmit');
-    sub.disabled    = true;
-    sub.textContent = 'Wysyłam…';
-
-    sendEmails(function() { showConfirm(); });
+    /* Pokaż krok 5 — płatność */
+    showPanel(5);
+    document.getElementById('bkPayTotal').textContent = bk.price + ' zł';
+    document.getElementById('bkPayDesc').textContent  =
+      bk.svcName + ' · ' + fmtDate(bk.date) + ', godz. ' + bk.time;
+    /* Reset przycisku płatności na wypadek powrotu */
+    var payBtn = document.getElementById('bkPayBtn');
+    payBtn.disabled    = false;
+    payBtn.textContent = '';
+    payBtn.innerHTML   =
+      '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>' +
+      ' Zapłać przez Przelewy24';
   });
+
+  /* Cofnij z kroku 5 do 4 */
+  document.getElementById('bkBack5').addEventListener('click', function() {
+    showPanel(4);
+  });
+
+  /* ── Przycisk płatności Przelewy24 ── */
+  document.getElementById('bkPayBtn').addEventListener('click', function() {
+    var btn = this;
+    btn.disabled    = true;
+    btn.textContent = 'Łączę z Przelewy24…';
+
+    /* Zapisz dane rezerwacji przed przekierowaniem */
+    sessionStorage.setItem('p24_bk', JSON.stringify({
+      svcName:     bk.svcName,
+      svcKey:      bk.svcKey,
+      dur:         bk.dur,
+      price:       bk.price,
+      dateIso:     bk.date ? bk.date.toISOString() : null,
+      time:        bk.time,
+      clientName:  bk.clientName,
+      clientEmail: bk.clientEmail,
+      clientPhone: bk.clientPhone,
+      clientMsg:   bk.clientMsg
+    }));
+
+    fetch('/api/p24/register', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        price:       bk.price,
+        svcName:     bk.svcName,
+        dur:         bk.dur,
+        date:        fmtDate(bk.date),
+        time:        bk.time,
+        clientName:  bk.clientName,
+        clientEmail: bk.clientEmail,
+        clientPhone: bk.clientPhone || '',
+        clientMsg:   bk.clientMsg   || ''
+      })
+    })
+    .then(function(r) { return r.json(); })
+    .then(function(res) {
+      if (res.status === 'ok') {
+        window.location.href = res.paymentUrl;
+      } else {
+        alert('Błąd Przelewy24: ' + (res.error || 'nieznany błąd') +
+              '\n\nSpróbuj ponownie lub skontaktuj się bezpośrednio: kat@reikihealing.pl');
+        btn.disabled    = false;
+        btn.innerHTML   =
+          '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>' +
+          ' Zapłać przez Przelewy24';
+      }
+    })
+    .catch(function(err) {
+      console.error(err);
+      alert('Błąd sieci — upewnij się, że serwer działa (python3 server.py).');
+      btn.disabled    = false;
+      btn.innerHTML   =
+        '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>' +
+        ' Zapłać przez Przelewy24';
+    });
+  });
+
+  /* ── Powrót z Przelewy24 — wykryj ?p24_return=1 w URL ── */
+  (function checkP24Return() {
+    var params = new URLSearchParams(window.location.search);
+    if (!params.get('p24_return')) return;
+
+    /* Wyczyść parametry z URL bez przeładowania */
+    window.history.replaceState({}, '', window.location.pathname);
+
+    var saved = sessionStorage.getItem('p24_bk');
+    if (!saved) { showConfirm(); return; }
+
+    try {
+      var s = JSON.parse(saved);
+      sessionStorage.removeItem('p24_bk');
+
+      /* Przywróć stan rezerwacji */
+      bk.svcName     = s.svcName     || '';
+      bk.svcKey      = s.svcKey      || '';
+      bk.dur         = s.dur         || 0;
+      bk.price       = s.price       || 0;
+      bk.date        = s.dateIso ? new Date(s.dateIso) : new Date();
+      bk.time        = s.time        || '';
+      bk.clientName  = s.clientName  || '';
+      bk.clientEmail = s.clientEmail || '';
+      bk.clientPhone = s.clientPhone || '';
+      bk.clientMsg   = s.clientMsg   || '';
+
+      /* Poczekaj na gotowość DOM */
+      setTimeout(function() {
+        /* Przewiń do sekcji bookingu */
+        var section = document.getElementById('booking');
+        if (section) section.scrollIntoView({ behavior: 'smooth' });
+
+        /* Ukryj wszystkie panele i stepper */
+        for (var i = 1; i <= 5; i++) {
+          var p = document.getElementById('bkPanel' + i);
+          var l = document.getElementById('bkStepL' + i);
+          if (p) p.classList.add('hidden');
+          if (l) { l.classList.remove('active'); l.classList.add('done'); }
+        }
+        document.getElementById('bkSummary').classList.add('hidden');
+
+        /* Wypełnij i pokaż ekran potwierdzenia */
+        document.getElementById('bkConfirmDetail').textContent =
+          'Sesja "' + bk.svcName + '" — ' + fmtDate(bk.date) +
+          ', godz. ' + bk.time +
+          '. Potwierdzenie zostanie wysłane na adres ' + bk.clientEmail + '.';
+        document.getElementById('bkCalLink').href = buildCalLink();
+        document.getElementById('bkConfirm').classList.remove('hidden');
+
+        /* Wyślij e-maile potwierdzające */
+        sendEmails(function() {});
+      }, 300);
+    } catch(err) {
+      console.error('Błąd powrotu z P24:', err);
+    }
+  })();
 
 })();
 </script>
