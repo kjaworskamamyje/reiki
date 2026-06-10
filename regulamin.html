@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Regulamin | Katarzyna Jaworska Reiki Warszawa</title>
+<meta name="description" content="Regulamin świadczenia usług sesji Reiki przez Katarzynę Jaworską. Zasady rezerwacji, odwoływania sesji, płatności online oraz ochrony danych osobowych.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<link rel="canonical" href="https://reikihealing.pl/regulamin.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+<style>
+/* ── Color system ── */
+:root {
+  --color-bg: #FAF7F2;
+  --color-bg-card: #F2EDE5;
+  --color-text: #2C2C2C;
+  --color-text-light: #6B6560;
+  --color-accent: #5C7A62;
+  --color-gold: #B89A5E;
+  --color-border: #E0D8CF;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── Navigation ── */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  padding: 18px 0;
+}
+
+.nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-link {
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+  transition: color 0.2s;
+}
+
+.nav-link:hover, .nav-link.active { color: var(--color-text); }
+
+.nav-cta {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold);
+  padding: 9px 20px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-cta:hover {
+  background: var(--color-gold);
+  color: #fff;
+}
+
+/* ── Page layout ── */
+.page-wrap {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 64px 24px 100px;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+  margin-bottom: 40px;
+  transition: color 0.2s;
+}
+
+.back-link:hover { color: var(--color-text); }
+
+.back-link svg {
+  width: 12px;
+  height: 12px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.page-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 16px;
+}
+
+.page-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-style: italic;
+  color: var(--color-text);
+  margin-bottom: 12px;
+  line-height: 1.15;
+}
+
+.page-meta {
+  font-size: 0.82rem;
+  color: var(--color-text-light);
+  margin-bottom: 48px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* ── Table of contents ── */
+.toc {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  padding: 28px 32px;
+  margin-bottom: 56px;
+}
+
+.toc-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-bottom: 16px;
+  color: var(--color-text);
+}
+
+.toc ol {
+  padding-left: 20px;
+}
+
+.toc li {
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  color: var(--color-text-light);
+}
+
+.toc a {
+  color: var(--color-text-light);
+  transition: color 0.2s;
+}
+
+.toc a:hover { color: var(--color-accent); }
+
+/* ── Article body ── */
+.page-body {
+  font-size: 0.95rem;
+  line-height: 1.85;
+}
+
+.page-body h2 {
+  font-size: 1.6rem;
+  font-style: italic;
+  color: var(--color-text);
+  margin-top: 56px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--color-border);
+  scroll-margin-top: 80px;
+}
+
+.page-body h3 {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--color-text);
+  margin-top: 28px;
+  margin-bottom: 10px;
+}
+
+.page-body p {
+  margin-bottom: 16px;
+  color: var(--color-text);
+}
+
+.page-body ul,
+.page-body ol {
+  padding-left: 24px;
+  margin-bottom: 16px;
+}
+
+.page-body li {
+  margin-bottom: 8px;
+}
+
+.page-body strong {
+  font-weight: 400;
+  color: var(--color-text);
+}
+
+.page-body a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.page-body a:hover { color: var(--color-gold); }
+
+/* ── Highlight box ── */
+.info-box {
+  background: var(--color-bg-card);
+  border-left: 3px solid var(--color-accent);
+  padding: 20px 24px;
+  margin: 24px 0;
+  font-size: 0.9rem;
+}
+
+.info-box.warning {
+  border-left-color: var(--color-gold);
+}
+
+.info-box p:last-child { margin-bottom: 0; }
+
+/* ── Footer ── */
+.footer {
+  background: var(--color-bg-card);
+  border-top: 1px solid var(--color-border);
+  padding: 48px 0 28px;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.footer-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.15rem;
+}
+
+.footer-tagline {
+  font-size: 0.78rem;
+  color: var(--color-text-light);
+  letter-spacing: 0.06em;
+  margin-top: 4px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.footer-social {
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.footer-social:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}
+
+.footer-social svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+
+.footer-copy {
+  font-size: 0.78rem;
+  color: var(--color-text-light);
+  text-align: right;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+  letter-spacing: 0.06em;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover, .footer-links a.active { color: var(--color-accent); }
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.72rem;
+  color: var(--color-border);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-border);
+}
+
+@media (max-width: 640px) {
+  .nav-right { gap: 16px; }
+  .nav-link { display: none; }
+  .footer-inner { grid-template-columns: 1fr; text-align: center; gap: 16px; }
+  .footer-copy { text-align: center; }
+  .page-wrap { padding: 40px 20px 72px; }
+  .toc { padding: 20px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container">
+    <a href="index.html" class="nav-logo">Katarzyna Jaworska | Reiki</a>
+    <div class="nav-right">
+      <a href="index.html" class="nav-link">Strona główna</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="index.html#booking" class="nav-cta">Umów wizytę</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="page-wrap">
+
+    <a href="index.html" class="back-link">
+      <svg viewBox="0 0 12 12"><path d="M10 6H2M6 2L2 6l4 4"/></svg>
+      Strona główna
+    </a>
+
+    <p class="page-label">Dokumenty prawne</p>
+    <h1 class="page-title">Regulamin świadczenia usług</h1>
+    <p class="page-meta">Obowiązuje od 1 czerwca 2025 · Katarzyna Jaworska Reiki · Warszawa</p>
+
+    <nav class="toc" aria-label="Spis treści">
+      <div class="toc-title">Spis treści</div>
+      <ol>
+        <li><a href="#postanowienia-ogolne">Postanowienia ogólne</a></li>
+        <li><a href="#definicje">Definicje</a></li>
+        <li><a href="#rezerwacja">Rezerwacja sesji</a></li>
+        <li><a href="#odwolanie">Odwołanie i zmiana terminu</a></li>
+        <li><a href="#platnosci">Płatności online</a></li>
+        <li><a href="#przebieg-sesji">Przebieg sesji i obowiązki Klienta</a></li>
+        <li><a href="#przeciwwskazania">Przeciwwskazania zdrowotne</a></li>
+        <li><a href="#maloletni">Osoby niepełnoletnie</a></li>
+        <li><a href="#odpowiedzialnosc">Odpowiedzialność</a></li>
+        <li><a href="#rodo">Ochrona danych osobowych (RODO)</a></li>
+        <li><a href="#reklamacje">Reklamacje i zwroty</a></li>
+        <li><a href="#postanowienia-koncowe">Postanowienia końcowe</a></li>
+      </ol>
+    </nav>
+
+    <div class="page-body">
+
+      <!-- §1 -->
+      <h2 id="postanowienia-ogolne">§ 1. Postanowienia ogólne</h2>
+      <p>Niniejszy Regulamin określa zasady korzystania z usług sesji Reiki świadczonych przez <strong>Katarzynę Jaworską</strong> prowadzącą działalność pod nazwą <strong>Katarzyna Jaworska Reiki</strong>, z siedzibą w Warszawie, zwaną dalej „Usługodawcą".</p>
+      <p>Dane kontaktowe Usługodawcy:</p>
+      <ul>
+        <li>Adres e-mail: <a href="mailto:kat@reikihealing.pl">kat@reikihealing.pl</a></li>
+        <li>Telefon / WhatsApp: <a href="tel:+48519389216">+48 519 389 216</a></li>
+        <li>Strona internetowa: <a href="https://reikihealing.pl">reikihealing.pl</a></li>
+      </ul>
+      <p>Każda osoba dokonująca rezerwacji sesji (dalej: „Klient") oświadcza, że zapoznała się z niniejszym Regulaminem i akceptuje jego postanowienia. Rezerwacja sesji jest równoznaczna z akceptacją Regulaminu.</p>
+      <p>Regulamin jest udostępniony bezpłatnie pod adresem <a href="https://reikihealing.pl/regulamin.html">reikihealing.pl/regulamin.html</a> i może być pobrany w formie pliku PDF na żądanie Klienta.</p>
+
+      <!-- §2 -->
+      <h2 id="definicje">§ 2. Definicje</h2>
+      <ul>
+        <li><strong>Sesja Reiki</strong> – zabieg z zakresu energetycznych technik wspierania dobrostanu, polegający na delikatnym ułożeniu dłoni na ciele Klienta lub nad nim.</li>
+        <li><strong>Rezerwacja</strong> – potwierdzony zapis Klienta na konkretny termin sesji.</li>
+        <li><strong>Przelewy24</strong> – system płatności elektronicznych obsługiwany przez PayPro S.A. z siedzibą w Poznaniu (ul. Pastelowa 8, 60-198 Poznań), za pośrednictwem którego realizowane są płatności online.</li>
+        <li><strong>Opłata za sesję</strong> – cena usługi widoczna w cenniku na stronie oraz w formularzu rezerwacji.</li>
+        <li><strong>Anulowanie</strong> – odwołanie przez Klienta potwierdzonej rezerwacji.</li>
+        <li><strong>No-show</strong> – niestawienie się Klienta na sesję bez uprzedniego anulowania rezerwacji.</li>
+      </ul>
+
+      <!-- §3 -->
+      <h2 id="rezerwacja">§ 3. Rezerwacja sesji</h2>
+      <p>Rezerwacji sesji można dokonać:</p>
+      <ul>
+        <li>przez formularz online dostępny na stronie <a href="https://reikihealing.pl/#booking">reikihealing.pl</a>,</li>
+        <li>telefonicznie lub przez WhatsApp pod numerem +48 519 389 216,</li>
+        <li>drogą e-mailową na adres <a href="mailto:kat@reikihealing.pl">kat@reikihealing.pl</a>.</li>
+      </ul>
+      <p>Rezerwacja jest wiążąca z chwilą:</p>
+      <ul>
+        <li>zaksięgowania płatności online (w przypadku płatności przez Przelewy24), lub</li>
+        <li>potwierdzenia rezerwacji przez Usługodawcę drogą e-mailową lub SMS (w przypadku rezerwacji bez przedpłaty).</li>
+      </ul>
+      <p>Potwierdzenie rezerwacji zawiera: datę i godzinę sesji, rodzaj sesji, miejsce oraz podsumowanie ceny.</p>
+      <p>W przypadku braku możliwości realizacji sesji w zarezerwowanym terminie Usługodawca niezwłocznie poinformuje Klienta i zaproponuje alternatywny termin lub zwrot wpłaconej kwoty.</p>
+
+      <!-- §4 -->
+      <h2 id="odwolanie">§ 4. Odwołanie i zmiana terminu</h2>
+
+      <div class="info-box">
+        <p><strong>Bezpłatne odwołanie lub zmiana terminu</strong> jest możliwa najpóźniej na <strong>48 godzin przed</strong> planowaną sesją.</p>
+        <p>Odwołanie dokonane w terminie krótszym niż 48 godzin lub niestawienie się na sesję skutkuje naliczeniem opłaty w wysokości <strong>100% ceny sesji</strong>.</p>
+      </div>
+
+      <h3>4.1. Odwołanie w terminie ≥ 48 godzin przed sesją</h3>
+      <p>Klient ma prawo bezpłatnie odwołać lub zmienić termin sesji, jeżeli poinformuje o tym Usługodawcę co najmniej 48 godzin przed jej rozpoczęciem. Kontakt możliwy jest telefonicznie, przez WhatsApp lub e-mailem. Decyduje godzina odebrania wiadomości przez Usługodawcę.</p>
+      <p>W przypadku wcześniejszej płatności online Usługodawca zwróci pełną kwotę na rachunek bankowy Klienta w terminie do 14 dni roboczych lub — według wyboru Klienta — zaksięguje ją jako przedpłatę na kolejną sesję.</p>
+
+      <h3>4.2. Odwołanie w terminie &lt; 48 godzin przed sesją</h3>
+      <p>Odwołanie sesji w czasie krótszym niż 48 godzin przed jej planowanym rozpoczęciem skutkuje naliczeniem opłaty w wysokości <strong>100% ceny sesji</strong>. Opłata ta pokrywa rezerwację czasu terapeutki oraz koszty organizacyjne, których nie jest możliwe odzyskanie przy tak krótkim wyprzedzeniu.</p>
+      <p>Jeżeli Klient dokonał przedpłaty, kwota nie zostaje zwrócona. Jeżeli płatność nie została uiszczona, Klient zobowiązany jest do zapłaty równowartości ceny odwołanej sesji w terminie 7 dni.</p>
+
+      <h3>4.3. No-show (niestawienie się bez odwołania)</h3>
+      <p>Niestawienie się na sesję bez uprzedniego odwołania traktowane jest jak odwołanie w terminie krótszym niż 48 godzin i skutkuje naliczeniem opłaty w wysokości <strong>100% ceny sesji</strong>.</p>
+
+      <h3>4.4. Wyjątki od zasady opłaty za anulowanie</h3>
+      <p>Usługodawca może odstąpić od naliczenia opłaty za anulowanie w przypadku udokumentowanych zdarzeń losowych (np. nagła choroba, wypadek, nagła hospitalizacja), pod warunkiem niezwłocznego poinformowania Usługodawcy i dostarczenia stosownego zaświadczenia. Decyzja o odstąpieniu od opłaty należy wyłącznie do Usługodawcy i podejmowana jest indywidualnie.</p>
+
+      <!-- §5 -->
+      <h2 id="platnosci">§ 5. Płatności online</h2>
+
+      <h3>5.1. Formy płatności</h3>
+      <p>Usługodawca przyjmuje następujące formy płatności:</p>
+      <ul>
+        <li>płatność online za pośrednictwem systemu <strong>Przelewy24</strong> (karty płatnicze, BLIK, szybkie przelewy bankowe),</li>
+        <li>przelew bankowy na numer konta podany w potwierdzeniu rezerwacji,</li>
+        <li>gotówka lub karta płatnicza w miejscu świadczenia usługi (o ile Usługodawca to umożliwia).</li>
+      </ul>
+
+      <h3>5.2. Płatność przez Przelewy24</h3>
+      <p>Operatorem systemu płatności online jest <strong>PayPro S.A.</strong> z siedzibą w Poznaniu (ul. Pastelowa 8, 60-198 Poznań), wpisana do Rejestru Przedsiębiorców KRS pod numerem 0000347935, wpisana do rejestru krajowych instytucji płatniczych prowadzonego przez Komisję Nadzoru Finansowego pod numerem IP24/2014.</p>
+      <p>Transakcja płatnicza realizowana jest bezpośrednio na platformie Przelewy24. Usługodawca nie przechowuje danych kart płatniczych ani innych danych uwierzytelniających. Dane te są przetwarzane wyłącznie przez PayPro S.A. zgodnie z jej regulaminem i polityką prywatności dostępną na stronie <a href="https://www.przelewy24.pl/regulamin" target="_blank" rel="noopener">przelewy24.pl/regulamin</a>.</p>
+
+      <h3>5.3. Bezpieczeństwo transakcji</h3>
+      <p>Wszystkie transakcje są szyfrowane protokołem SSL/TLS. Usługodawca stosuje mechanizm weryfikacji transakcji (weryfikacja po stronie serwera) w celu potwierdzenia każdej płatności przed realizacją rezerwacji.</p>
+
+      <h3>5.4. Potwierdzenie płatności</h3>
+      <p>Po pomyślnym zaksięgowaniu płatności Klient otrzymuje potwierdzenie rezerwacji na podany adres e-mail. Jeżeli potwierdzenie nie dotarło w ciągu 30 minut, prosimy o kontakt pod adresem <a href="mailto:kat@reikihealing.pl">kat@reikihealing.pl</a>.</p>
+
+      <h3>5.5. Ceny</h3>
+      <p>Ceny sesji podane na stronie są cenami brutto wyrażonymi w polskich złotych (PLN) i zawierają wszelkie należne podatki. Usługodawca zastrzega sobie prawo do zmiany cennika z zachowaniem 14-dniowego okresu uprzedzenia, przy czym zmiany cen nie dotyczą rezerwacji już potwierdzonych.</p>
+
+      <h3>5.6. Faktury</h3>
+      <p>Na życzenie Klienta Usługodawca wystawia fakturę VAT lub rachunek. Prośbę o wystawienie dokumentu należy zgłosić najpóźniej w dniu realizacji sesji.</p>
+
+      <!-- §6 -->
+      <h2 id="przebieg-sesji">§ 6. Przebieg sesji i obowiązki Klienta</h2>
+      <p>Klient zobowiązany jest do:</p>
+      <ul>
+        <li>przybycia na sesję punktualnie — spóźnienie skraca czas sesji bez zmiany ceny,</li>
+        <li>poinformowania Usługodawcy przed sesją o wszelkich stanach zdrowia, ciąży, przyjmowanych lekach oraz wcześniejszych urazach lub schorzeniach,</li>
+        <li>zachowania w miejscu sesji spokoju i poszanowania komfortu innych osób,</li>
+        <li>nieprzybycia na sesję pod wpływem alkoholu, narkotyków lub innych substancji psychoaktywnych.</li>
+      </ul>
+      <p>Usługodawca ma prawo odmówić przeprowadzenia sesji lub przerwać ją w każdej chwili, jeżeli stan Klienta lub jego zachowanie stwarza zagrożenie dla Klienta lub Usługodawcy. W takim przypadku opłata za sesję nie jest zwracana.</p>
+      <p>Sesja Reiki nie stanowi porady medycznej, psychologicznej ani psychiatrycznej i nie zastępuje leczenia konwencjonalnego. Reiki jest metodą uzupełniającą dobrostanu i relaksacji.</p>
+
+      <!-- §7 -->
+      <h2 id="przeciwwskazania">§ 7. Przeciwwskazania zdrowotne</h2>
+
+      <div class="info-box warning">
+        <p><strong>Reiki jest bezpieczną metodą uzupełniającą</strong>, jednak przed sesją należy poinformować terapeutkę o stanie swojego zdrowia. W przypadku poważnych schorzeń zalecana jest konsultacja z lekarzem prowadzącym.</p>
+      </div>
+
+      <p>Sesja Reiki jest generalnie bezpieczna dla wszystkich. Usługodawca zaleca jednak wcześniejszą konsultację lekarską w przypadku:</p>
+      <ul>
+        <li>aktywnych chorób nowotworowych w trakcie radioterapii lub chemioterapii,</li>
+        <li>zaburzeń psychotycznych lub schizofrenii w fazie ostrej,</li>
+        <li>ostrego stanu zapalnego wymagającego leczenia medycznego,</li>
+        <li>ciąży o podwyższonym ryzyku (szczegółowe zasady sesji w ciąży określa odrębna informacja dostępna na stronie).</li>
+      </ul>
+      <p>Klient ponosi odpowiedzialność za poinformowanie Usługodawcy o wszelkich schorzeniach i stanach zdrowia, które mogą mieć wpływ na przebieg sesji. Zatajenie istotnych informacji zdrowotnych zwalnia Usługodawcę z odpowiedzialności za ewentualne skutki sesji.</p>
+
+      <!-- §8 -->
+      <h2 id="maloletni">§ 8. Osoby niepełnoletnie</h2>
+      <p>Sesje dla osób poniżej 18. roku życia wymagają pisemnej zgody rodzica lub opiekuna prawnego. Opiekun prawny musi być obecny podczas sesji lub złożyć pisemne oświadczenie o wyrażeniu zgody i zrzeczeniu się roszczeń, dostarczone przed sesją.</p>
+      <p>Sesje dla dzieci poniżej 12. roku życia odbywają się wyłącznie w obecności rodzica lub opiekuna prawnego. Czas trwania sesji dla dzieci dostosowywany jest indywidualnie.</p>
+
+      <!-- §9 -->
+      <h2 id="odpowiedzialnosc">§ 9. Odpowiedzialność</h2>
+      <p>Usługodawca zobowiązuje się do świadczenia usług z należytą starannością, zgodnie z posiadanymi kwalifikacjami i aktualną wiedzą z zakresu Reiki.</p>
+      <p>Usługodawca nie ponosi odpowiedzialności za:</p>
+      <ul>
+        <li>skutki zatajenia przez Klienta informacji o stanie zdrowia,</li>
+        <li>skutki naruszenia przez Klienta zaleceń zdrowotnych lekarza prowadzącego,</li>
+        <li>rzeczy osobiste Klienta pozostawione w miejscu sesji,</li>
+        <li>brak oczekiwanych przez Klienta efektów sesji — Reiki jest metodą holistyczną, a indywidualne rezultaty mogą się różnić,</li>
+        <li>przerwy w dostępności systemu Przelewy24 lub inne awarie techniczne leżące po stronie operatora płatności.</li>
+      </ul>
+      <p>Usługodawca nie daje gwarancji wyleczenia jakichkolwiek schorzeń. Reiki jest praktyką wspierającą dobrostan, a nie medyczną metodą leczenia.</p>
+      <p>Odpowiedzialność Usługodawcy z tytułu niewykonania lub nienależytego wykonania usługi ograniczona jest do wysokości opłaconej przez Klienta ceny sesji.</p>
+
+      <!-- §10 -->
+      <h2 id="rodo">§ 10. Ochrona danych osobowych (RODO)</h2>
+
+      <h3>10.1. Administrator danych</h3>
+      <p>Administratorem danych osobowych Klientów jest Katarzyna Jaworska prowadząca działalność pod nazwą Katarzyna Jaworska Reiki, z siedzibą w Warszawie. Kontakt: <a href="mailto:kat@reikihealing.pl">kat@reikihealing.pl</a>.</p>
+
+      <h3>10.2. Cel i podstawa przetwarzania</h3>
+      <p>Dane osobowe (imię, nazwisko, adres e-mail, numer telefonu) zbierane są w celu:</p>
+      <ul>
+        <li>realizacji i potwierdzenia rezerwacji — podstawa: wykonanie umowy (art. 6 ust. 1 lit. b RODO),</li>
+        <li>wystawienia faktur i dokumentacji finansowej — podstawa: obowiązek prawny (art. 6 ust. 1 lit. c RODO),</li>
+        <li>kontaktu w sprawie sesji i wysyłania potwierdzeń — podstawa: wykonanie umowy,</li>
+        <li>wysyłania informacji o usługach i ofertach (newsletter) — podstawa: zgoda Klienta (art. 6 ust. 1 lit. a RODO); zgoda może być wycofana w dowolnym momencie.</li>
+      </ul>
+
+      <h3>10.3. Prawa Klienta</h3>
+      <p>Klientowi przysługuje prawo do: dostępu do swoich danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, przenoszenia danych oraz wniesienia sprzeciwu wobec przetwarzania. Żądania należy kierować na adres: <a href="mailto:kat@reikihealing.pl">kat@reikihealing.pl</a>.</p>
+      <p>Klient ma prawo wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych (ul. Stawki 2, 00-193 Warszawa, <a href="https://uodo.gov.pl" target="_blank" rel="noopener">uodo.gov.pl</a>).</p>
+
+      <h3>10.4. Przechowywanie danych</h3>
+      <p>Dane przetwarzane na podstawie umowy przechowywane są przez czas trwania współpracy i 5 lat po jej zakończeniu (ze względu na przepisy podatkowe). Dane przetwarzane na podstawie zgody — do czasu jej wycofania.</p>
+
+      <h3>10.5. Przekazywanie danych</h3>
+      <p>Dane Klientów nie są sprzedawane ani udostępniane osobom trzecim, z wyjątkiem operatora płatności PayPro S.A. (Przelewy24) w zakresie niezbędnym do realizacji transakcji, podmiotów świadczących usługi IT (hosting, e-mail) — wyłącznie na podstawie umów powierzenia danych — oraz organów państwowych, jeżeli wynika to z obowiązku prawnego.</p>
+
+      <!-- §11 -->
+      <h2 id="reklamacje">§ 11. Reklamacje i zwroty</h2>
+
+      <h3>11.1. Składanie reklamacji</h3>
+      <p>Reklamacje dotyczące świadczonych usług należy zgłaszać pisemnie na adres e-mail <a href="mailto:kat@reikihealing.pl">kat@reikihealing.pl</a> lub listownie na adres Usługodawcy, nie później niż w ciągu 14 dni od daty sesji.</p>
+      <p>Reklamacja powinna zawierać: imię i nazwisko Klienta, datę sesji, opis problemu oraz oczekiwany sposób rozstrzygnięcia.</p>
+
+      <h3>11.2. Rozpatrzenie reklamacji</h3>
+      <p>Usługodawca rozpatruje reklamację w terminie 14 dni od jej otrzymania i informuje Klienta o sposobie jej rozstrzygnięcia drogą e-mailową.</p>
+
+      <h3>11.3. Zwroty</h3>
+      <p>Zwrot płatności przysługuje Klientowi w przypadku:</p>
+      <ul>
+        <li>odwołania sesji przez Usługodawcę — zwrot 100% opłaconej kwoty,</li>
+        <li>odwołania przez Klienta z zachowaniem 48-godzinnego wyprzedzenia — zwrot 100% opłaconej kwoty,</li>
+        <li>uznania reklamacji przez Usługodawcę.</li>
+      </ul>
+      <p>Zwroty realizowane są przelewem bankowym lub za pośrednictwem Przelewy24 w terminie do 14 dni roboczych.</p>
+
+      <h3>11.4. Pozasądowe rozwiązywanie sporów</h3>
+      <p>Klient będący konsumentem ma prawo do skorzystania z pozasądowych metod rozwiązywania sporów, w tym platformy ODR Komisji Europejskiej dostępnej pod adresem <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>.</p>
+
+      <!-- §12 -->
+      <h2 id="postanowienia-koncowe">§ 12. Postanowienia końcowe</h2>
+      <p>Regulamin wchodzi w życie z dniem 1 czerwca 2025 roku.</p>
+      <p>Usługodawca zastrzega sobie prawo do zmiany Regulaminu. O zmianach Klienci zostaną poinformowani drogą e-mailową z co najmniej 14-dniowym wyprzedzeniem. Zmiany nie dotyczą rezerwacji potwierdzonych przed datą wejścia zmian w życie.</p>
+      <p>W sprawach nieuregulowanych niniejszym Regulaminem zastosowanie mają przepisy powszechnie obowiązującego prawa polskiego, w tym Kodeksu cywilnego, ustawy o świadczeniu usług drogą elektroniczną (Dz. U. 2002 nr 144 poz. 1204) oraz ustawy o prawach konsumenta (Dz. U. 2014 poz. 827).</p>
+      <p>Spory wynikłe z realizacji usług Strony będą rozwiązywały w pierwszej kolejności polubownie. W przypadku braku porozumienia spory rozpatrywane będą przez sąd właściwy dla siedziby Usługodawcy, z zastrzeżeniem przepisów o właściwości wyłącznej sądu na rzecz konsumenta.</p>
+      <p>Regulamin sporządzony jest w języku polskim. W razie wątpliwości dotyczących tłumaczeń, obowiązuje wersja polska.</p>
+
+      <div class="info-box" style="margin-top: 48px;">
+        <p>Masz pytania dotyczące Regulaminu? Napisz do mnie: <a href="mailto:kat@reikihealing.pl">kat@reikihealing.pl</a> lub zadzwoń: <a href="tel:+48519389216">+48 519 389 216</a>.</p>
+      </div>
+
+    </div><!-- /.page-body -->
+  </div><!-- /.page-wrap -->
+</div><!-- /.container -->
+
+<footer class="footer" aria-label="Stopka">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-name">Katarzyna Jaworska</div>
+        <div class="footer-tagline">Warszawa · Ciało i umysł w równowadze</div>
+      </div>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/lettinggoofadream/" class="footer-social" aria-label="Instagram" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+      </div>
+      <div class="footer-copy">© 2025 Katarzyna Jaworska Reiki</div>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Strona główna</a>
+      <a href="blog.html">Blog</a>
+      <a href="regulamin.html" class="active">Regulamin</a>
+      <a href="index.html#booking">Umów wizytę</a>
+    </div>
+    <div class="footer-bottom">Sesje Reiki w Warszawie · Stworzone z troską</div>
+  </div>
+</footer>
+
+</body>
+</html>
