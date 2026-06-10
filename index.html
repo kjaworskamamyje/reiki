@@ -24,7 +24,9 @@
     {
       "@type": "HealthAndBeautyBusiness",
       "@id": "https://reikihealing.pl/#business",
-      "name": "Katarzyna Jaworska Reiki",
+      "name": "eKreacje Katarzyna Jaworska",
+      "alternateName": "Katarzyna Jaworska Reiki",
+      "taxID": "8121774118",
       "url": "https://reikihealing.pl",
       "description": "Sesje Reiki w Warszawie — przywróć równowagę ciała i umysłu. Katarzyna Jaworska, certyfikowana terapeutka Reiki II stopnia.",
       "telephone": "+48519389216",
@@ -1156,6 +1158,88 @@ button, input, textarea, select {
   background: var(--color-bg);
 }
 
+/* ── Section: Contact / Dane kontaktowe ── */
+.contact-section {
+  padding: 100px 0;
+  background: var(--color-bg-card);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  border: 1px solid var(--color-border);
+}
+
+.contact-card {
+  background: var(--color-bg);
+  padding: 40px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-card-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.contact-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--color-text);
+  line-height: 1.3;
+}
+
+.contact-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contact-row-key {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+}
+
+.contact-row-val {
+  font-size: 0.92rem;
+  color: var(--color-text);
+  line-height: 1.55;
+}
+
+.contact-row-val a {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-row-val a:hover {
+  color: var(--color-accent);
+}
+
+.contact-nip {
+  display: inline-block;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  color: var(--color-text-light);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  padding: 4px 12px;
+  margin-top: 4px;
+}
+
+@media (max-width: 860px) {
+  .contact-grid { grid-template-columns: 1fr; }
+  .contact-card { padding: 32px 24px; }
+}
+
 .instagram-header {
   text-align: center;
   margin-bottom: 40px;
@@ -1559,6 +1643,7 @@ button, input, textarea, select {
     <a href="#" class="nav-logo">Katarzyna Jaworska | Reiki</a><!-- REPLACE: practitioner name -->
     <div class="nav-right">
       <a href="blog.html" class="nav-blog-link">Blog</a>
+      <a href="#kontakt" class="nav-blog-link" data-pl="Kontakt" data-en="Contact">Kontakt</a>
       <button class="lang-toggle" id="langToggle" aria-label="Zmień język / Switch language">
         <span class="lang-active" id="langPL">PL</span>
         <span style="color: var(--color-border);">|</span>
@@ -2179,7 +2264,69 @@ button, input, textarea, select {
   </div>
 </section>
 
-<!-- ── 11. Footer ── -->
+<!-- ── 11. Dane kontaktowe ── -->
+<section id="kontakt" class="contact-section fade-in" aria-labelledby="contact-heading">
+  <div class="container">
+    <div class="section-header">
+      <h2 id="contact-heading" data-pl="Dane kontaktowe" data-en="Contact Information">Dane kontaktowe</h2>
+      <p data-pl="Masz pytanie? Napisz lub zadzwoń — odpowiadam najszybciej jak mogę." data-en="Have a question? Write or call — I reply as soon as I can.">Masz pytanie? Napisz lub zadzwoń — odpowiadam najszybciej jak mogę.</p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-card">
+        <p class="contact-card-label" data-pl="Dane firmy" data-en="Company Details">Dane firmy</p>
+        <h3 data-pl="eKreacje Katarzyna Jaworska" data-en="eKreacje Katarzyna Jaworska">eKreacje Katarzyna Jaworska</h3>
+        <div class="contact-row">
+          <span class="contact-row-key">NIP</span>
+          <span class="contact-row-val"><span class="contact-nip">812&thinsp;177&thinsp;41&thinsp;18</span></span>
+        </div>
+        <div class="contact-row">
+          <span class="contact-row-key" data-pl="Adres rejestrowy" data-en="Registered Address">Adres rejestrowy</span>
+          <span class="contact-row-val">ul. Stanisława Mikołajczyka 5a<br>35-506 Rzeszów</span>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <p class="contact-card-label" data-pl="Kontakt" data-en="Contact">Kontakt</p>
+        <h3 data-pl="Napisz lub zadzwoń" data-en="Write or Call">Napisz lub zadzwoń</h3>
+        <div class="contact-row">
+          <span class="contact-row-key">E-mail</span>
+          <span class="contact-row-val"><a href="mailto:kat@reikihealing.pl">kat@reikihealing.pl</a></span>
+        </div>
+        <div class="contact-row">
+          <span class="contact-row-key" data-pl="Telefon / WhatsApp" data-en="Phone / WhatsApp">Telefon / WhatsApp</span>
+          <span class="contact-row-val"><a href="tel:+48519389216">+48 519 389 216</a></span>
+        </div>
+        <div class="contact-row">
+          <span class="contact-row-key">Instagram</span>
+          <span class="contact-row-val"><a href="https://www.instagram.com/lettinggoofadream/" target="_blank" rel="noopener">@lettinggoofadream</a></span>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <p class="contact-card-label" data-pl="Sesje" data-en="Sessions">Sesje</p>
+        <h3 data-pl="Warszawa i online" data-en="Warsaw &amp; Online">Warszawa i online</h3>
+        <div class="contact-row">
+          <span class="contact-row-key" data-pl="Miejsce sesji" data-en="Session Location">Miejsce sesji</span>
+          <span class="contact-row-val" data-pl="Warszawa (adres przesyłany po rezerwacji)" data-en="Warsaw (address sent after booking)">Warszawa<br><span style="font-size:0.82rem;color:var(--color-text-light);" data-pl="Dokładny adres przesyłany po potwierdzeniu rezerwacji" data-en="Exact address sent after booking confirmation">Dokładny adres przesyłany po potwierdzeniu rezerwacji</span></span>
+        </div>
+        <div class="contact-row">
+          <span class="contact-row-key" data-pl="Godziny pracy" data-en="Working Hours">Godziny pracy</span>
+          <span class="contact-row-val" data-pl="Pon – Sob, 9:00 – 20:00" data-en="Mon – Sat, 9:00 – 20:00">Pon – Sob, 9:00 – 20:00</span>
+        </div>
+        <div class="contact-row" style="margin-top:8px;">
+          <a href="#booking" class="btn-primary" style="font-size:0.78rem;padding:11px 24px;">
+            <span data-pl="Umów wizytę" data-en="Book a Session">Umów wizytę</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── 12. Footer ── -->
 <footer class="footer" aria-label="Stopka">
   <div class="container">
     <div class="footer-inner">
