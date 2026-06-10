@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Polityka prywatności | Katarzyna Jaworska Reiki Warszawa</title>
+<meta name="description" content="Polityka prywatności i plików cookie serwisu reikihealing.pl — Katarzyna Jaworska Reiki Warszawa. Informacje o przetwarzaniu danych osobowych zgodnie z RODO.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<link rel="canonical" href="https://reikihealing.pl/polityka-prywatnosci.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+<style>
+:root {
+  --color-bg: #FAF7F2;
+  --color-bg-card: #F2EDE5;
+  --color-text: #2C2C2C;
+  --color-text-light: #6B6560;
+  --color-accent: #5C7A62;
+  --color-gold: #B89A5E;
+  --color-border: #E0D8CF;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 300; line-height: 1.25; }
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+.container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+/* Nav */
+.nav {
+  position: sticky; top: 0; z-index: 50;
+  background: var(--color-bg); border-bottom: 1px solid var(--color-border);
+  padding: 18px 0;
+}
+.nav .container { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.nav-logo { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.25rem; color: var(--color-text); white-space: nowrap; }
+.nav-right { display: flex; align-items: center; gap: 28px; }
+.nav-link { font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; color: var(--color-text-light); transition: color .2s; }
+.nav-link:hover { color: var(--color-text); }
+.nav-cta { font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; border: 1px solid var(--color-gold); color: var(--color-gold); padding: 9px 20px; transition: background .2s, color .2s; }
+.nav-cta:hover { background: var(--color-gold); color: #fff; }
+
+/* Page */
+.page-wrap { max-width: 780px; margin: 0 auto; padding: 64px 24px 100px; }
+.back-link { display: inline-flex; align-items: center; gap: 8px; font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; color: var(--color-text-light); margin-bottom: 40px; transition: color .2s; }
+.back-link:hover { color: var(--color-text); }
+.back-link svg { width: 12px; height: 12px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.page-label { font-size: .7rem; letter-spacing: .2em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 16px; }
+.page-title { font-size: clamp(2rem, 5vw, 3rem); font-style: italic; color: var(--color-text); margin-bottom: 12px; line-height: 1.15; }
+.page-meta { font-size: .82rem; color: var(--color-text-light); margin-bottom: 48px; padding-bottom: 32px; border-bottom: 1px solid var(--color-border); }
+
+/* TOC */
+.toc { background: var(--color-bg-card); border: 1px solid var(--color-border); padding: 28px 32px; margin-bottom: 56px; }
+.toc-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-style: italic; margin-bottom: 16px; }
+.toc ol { padding-left: 20px; }
+.toc li { font-size: .85rem; margin-bottom: 6px; color: var(--color-text-light); }
+.toc a { color: var(--color-text-light); transition: color .2s; }
+.toc a:hover { color: var(--color-accent); }
+
+/* Body */
+.page-body { font-size: .95rem; line-height: 1.85; }
+.page-body h2 { font-size: 1.6rem; font-style: italic; margin-top: 56px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid var(--color-border); scroll-margin-top: 80px; }
+.page-body h3 { font-size: 1.1rem; font-style: italic; margin-top: 28px; margin-bottom: 10px; }
+.page-body p { margin-bottom: 16px; }
+.page-body ul, .page-body ol { padding-left: 24px; margin-bottom: 16px; }
+.page-body li { margin-bottom: 8px; }
+.page-body strong { font-weight: 400; }
+.page-body a { color: var(--color-accent); text-decoration: underline; text-underline-offset: 3px; }
+.page-body a:hover { color: var(--color-gold); }
+.info-box { background: var(--color-bg-card); border-left: 3px solid var(--color-accent); padding: 20px 24px; margin: 24px 0; font-size: .9rem; }
+.info-box p:last-child { margin-bottom: 0; }
+
+/* Cookie table */
+.cookie-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: .85rem; }
+.cookie-table th { text-align: left; padding: 10px 14px; background: var(--color-bg-card); border: 1px solid var(--color-border); font-weight: 400; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: .95rem; }
+.cookie-table td { padding: 10px 14px; border: 1px solid var(--color-border); vertical-align: top; color: var(--color-text-light); }
+.cookie-table tr:nth-child(even) td { background: var(--color-bg-card); }
+
+/* Footer */
+.footer { background: var(--color-bg-card); border-top: 1px solid var(--color-border); padding: 48px 0 28px; }
+.footer-inner { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 24px; margin-bottom: 32px; }
+.footer-name { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.15rem; }
+.footer-tagline { font-size: .78rem; color: var(--color-text-light); letter-spacing: .06em; margin-top: 4px; }
+.footer-socials { display: flex; gap: 12px; justify-content: center; }
+.footer-social { width: 38px; height: 38px; border: 1px solid var(--color-border); display: flex; align-items: center; justify-content: center; transition: border-color .2s, color .2s; }
+.footer-social:hover { border-color: var(--color-gold); color: var(--color-gold); }
+.footer-social svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.5; }
+.footer-copy { font-size: .78rem; color: var(--color-text-light); text-align: right; }
+.footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 20px; flex-wrap: wrap; }
+.footer-links a { font-size: .75rem; color: var(--color-text-light); letter-spacing: .06em; transition: color .2s; }
+.footer-links a:hover, .footer-links a.active { color: var(--color-accent); }
+.footer-bottom { text-align: center; font-size: .72rem; color: var(--color-border); letter-spacing: .12em; text-transform: uppercase; padding-top: 20px; border-top: 1px solid var(--color-border); }
+
+/* Reset consent button */
+.reset-btn { background: none; border: 1px solid var(--color-border); color: var(--color-text-light); cursor: pointer; padding: 8px 18px; font-family: 'Jost', sans-serif; font-size: .8rem; font-weight: 300; letter-spacing: .06em; transition: border-color .2s, color .2s; margin-top: 12px; }
+.reset-btn:hover { border-color: var(--color-accent); color: var(--color-accent); }
+
+@media (max-width: 640px) {
+  .nav-right { gap: 16px; }
+  .nav-link { display: none; }
+  .footer-inner { grid-template-columns: 1fr; text-align: center; gap: 16px; }
+  .footer-copy { text-align: center; }
+  .page-wrap { padding: 40px 20px 72px; }
+  .toc { padding: 20px; }
+  .cookie-table { font-size: .78rem; }
+  .cookie-table th, .cookie-table td { padding: 8px 10px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container">
+    <a href="index.html" class="nav-logo">Katarzyna Jaworska | Reiki</a>
+    <div class="nav-right">
+      <a href="index.html" class="nav-link">Strona główna</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="index.html#booking" class="nav-cta">Umów wizytę</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="page-wrap">
+
+    <a href="index.html" class="back-link">
+      <svg viewBox="0 0 12 12"><path d="M10 6H2M6 2L2 6l4 4"/></svg>
+      Strona główna
+    </a>
+
+    <p class="page-label">Dokumenty prawne</p>
+    <h1 class="page-title">Polityka prywatności i cookies</h1>
+    <p class="page-meta">Obowiązuje od 1 czerwca 2025 · Katarzyna Jaworska Reiki · Warszawa</p>
+
+    <nav class="toc" aria-label="Spis treści">
+      <div class="toc-title">Spis treści</div>
+      <ol>
+        <li><a href="#administrator">Administrator danych</a></li>
+        <li><a href="#dane-zbierane">Jakie dane zbieramy i w jakim celu</a></li>
+        <li><a href="#cookies">Pliki cookie i pamięć przeglądarki</a></li>
+        <li><a href="#uslugi-zewnetrzne">Zewnętrzne usługi i podmioty trzecie</a></li>
+        <li><a href="#prawa">Twoje prawa (RODO)</a></li>
+        <li><a href="#bezpieczenstwo">Bezpieczeństwo danych</a></li>
+        <li><a href="#zmiany">Zmiany polityki</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ol>
+    </nav>
+
+    <div class="page-body">
+
+      <div class="info-box">
+        <p>Strona <strong>reikihealing.pl</strong> nie korzysta z Google Analytics, Facebook Pixel ani żadnych narzędzi śledzących. Nie sprzedajemy danych. Zbieramy minimum niezbędne do działania strony i obsługi rezerwacji.</p>
+      </div>
+
+      <!-- §1 -->
+      <h2 id="administrator">1. Administrator danych osobowych</h2>
+      <p>Administratorem danych osobowych jest <strong>Katarzyna Jaworska</strong> prowadząca działalność pod nazwą <strong>Katarzyna Jaworska Reiki</strong>, z siedzibą w Warszawie.</p>
+      <p>Kontakt w sprawach danych osobowych:</p>
+      <ul>
+        <li>E-mail: <a href="mailto:kat@reikihealing.pl">kat@reikihealing.pl</a></li>
+        <li>Telefon: <a href="tel:+48519389216">+48 519 389 216</a></li>
+      </ul>
+
+      <!-- §2 -->
+      <h2 id="dane-zbierane">2. Jakie dane zbieramy i w jakim celu</h2>
+
+      <h3>2.1. Rezerwacja sesji</h3>
+      <p>Gdy wypełniasz formularz rezerwacji, podajesz dobrowolnie:</p>
+      <ul>
+        <li>imię i nazwisko,</li>
+        <li>adres e-mail,</li>
+        <li>numer telefonu (opcjonalnie),</li>
+        <li>wybrany termin i rodzaj sesji.</li>
+      </ul>
+      <p>Dane te są używane wyłącznie do potwierdzenia rezerwacji (wysyłka e-mail przez EmailJS) i kontaktu w sprawie sesji. <strong>Nie trafiają do żadnej bazy danych</strong> — wysyłane są bezpośrednio na adres terapeutki.</p>
+      <p>Podstawa prawna: art. 6 ust. 1 lit. b RODO (wykonanie umowy).</p>
+
+      <h3>2.2. Płatności online</h3>
+      <p>Gdy wybierasz płatność przez Przelewy24, Twoje imię, adres e-mail i kwota są przekazywane do operatora płatności <strong>PayPro S.A.</strong> (ul. Pastelowa 8, 60-198 Poznań). PayPro przetwarza dane płatnicze zgodnie z własną <a href="https://www.przelewy24.pl/regulamin" target="_blank" rel="noopener">polityką prywatności</a>. My nie przechowujemy numerów kart ani danych uwierzytelniających.</p>
+
+      <h3>2.3. Kontakt e-mail / WhatsApp</h3>
+      <p>Gdy piszesz do nas bezpośrednio, przetwarzamy dane zawarte w wiadomości wyłącznie w celu udzielenia odpowiedzi. Podstawa: art. 6 ust. 1 lit. f RODO (prawnie uzasadniony interes).</p>
+
+      <h3>2.4. Logi serwera</h3>
+      <p>Serwer Vercel (Vercel Inc., 340 Pine Street Suite 900, San Francisco, CA 94104, USA) automatycznie zapisuje standardowe logi dostępu: adres IP, typ przeglądarki, odwiedzana strona, znacznik czasu. Dane te służą wyłącznie do diagnostyki technicznej i są usuwane zgodnie z polityką Vercel. Więcej: <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">vercel.com/legal/privacy-policy</a>.</p>
+
+      <!-- §3 -->
+      <h2 id="cookies">3. Pliki cookie i pamięć przeglądarki</h2>
+      <p>Strona <strong>nie ustawia własnych plików cookie</strong> (HTTP cookies). Używamy natomiast <strong>pamięci przeglądarki</strong> (Web Storage API) do celów funkcjonalnych.</p>
+
+      <table class="cookie-table">
+        <thead>
+          <tr>
+            <th>Nazwa</th>
+            <th>Typ</th>
+            <th>Cel</th>
+            <th>Czas przechowywania</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>lang</code></td>
+            <td>localStorage</td>
+            <td>Zapamiętanie wybranego języka (PL / EN)</td>
+            <td>Do ręcznego wyczyszczenia</td>
+          </tr>
+          <tr>
+            <td><code>p24_bk</code></td>
+            <td>sessionStorage</td>
+            <td>Przechowanie danych rezerwacji podczas przekierowania do Przelewy24 i powrotu z płatności</td>
+            <td>Do zamknięcia karty (usuwane zaraz po powrocie z płatności)</td>
+          </tr>
+          <tr>
+            <td><code>rh_cookie_consent</code></td>
+            <td>localStorage</td>
+            <td>Zapamiętanie Twojej decyzji dotyczącej cookies (żeby baner nie pojawiał się przy każdej wizycie)</td>
+            <td>12 miesięcy</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Jak zarządzać plikami cookie i pamięcią przeglądarki</h3>
+      <p>Możesz w każdej chwili wyczyścić dane przechowywane przez przeglądarkę:</p>
+      <ul>
+        <li><strong>Chrome:</strong> Ustawienia → Prywatność i bezpieczeństwo → Wyczyść dane przeglądania</li>
+        <li><strong>Firefox:</strong> Ustawienia → Prywatność i bezpieczeństwo → Ciasteczka i dane stron</li>
+        <li><strong>Safari:</strong> Preferencje → Prywatność → Zarządzaj danymi stron internetowych</li>
+      </ul>
+      <p>Możesz też zresetować swoją decyzję dotyczącą cookies na tej stronie:</p>
+      <button class="reset-btn" id="reset-consent">Zresetuj ustawienia cookies</button>
+
+      <!-- §4 -->
+      <h2 id="uslugi-zewnetrzne">4. Zewnętrzne usługi i podmioty trzecie</h2>
+
+      <h3>4.1. Google Fonts</h3>
+      <p>Strona ładuje czcionki z serwerów Google (fonts.googleapis.com, fonts.gstatic.com). Podczas ładowania Twoja przeglądarka wysyła żądanie do Google, które może zawierać adres IP. Google może przetwarzać te dane zgodnie z <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Polityką prywatności Google</a>. Czcionki są niezbędne do poprawnego wyświetlania strony.</p>
+
+      <h3>4.2. EmailJS</h3>
+      <p>Do wysyłki e-mail z potwierdzeniem rezerwacji używamy serwisu <strong>EmailJS</strong> (emailjs.com). Biblioteka ładowana jest z CDN jsdelivr.net. Dane z formularza (imię, e-mail, termin sesji) przesyłane są przez API EmailJS bezpośrednio na adres terapeutki. EmailJS przetwarza dane zgodnie z własną <a href="https://www.emailjs.com/legal/privacy-policy/" target="_blank" rel="noopener">polityką prywatności</a>.</p>
+
+      <h3>4.3. Przelewy24 (PayPro S.A.)</h3>
+      <p>Płatności obsługuje <strong>PayPro S.A.</strong> z siedzibą w Poznaniu, wpisana do rejestru krajowych instytucji płatniczych KNF pod numerem IP24/2014. Podczas płatności zostajesz przekierowana/-y na stronę Przelewy24, gdzie obowiązuje ich <a href="https://www.przelewy24.pl/obowiazek-informacyjny" target="_blank" rel="noopener">obowiązek informacyjny</a>. My nie widzimy Twoich danych karty.</p>
+
+      <h3>4.4. Vercel (hosting)</h3>
+      <p>Strona hostowana jest na infrastrukturze <strong>Vercel Inc.</strong> (USA). Vercel jest certyfikowany zgodnie z EU-U.S. Data Privacy Framework. Logi serwera (IP, czas, URL) przechowywane są zgodnie z polityką Vercel: <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">vercel.com/legal/privacy-policy</a>.</p>
+
+      <!-- §5 -->
+      <h2 id="prawa">5. Twoje prawa (RODO)</h2>
+      <p>Jako osoba, której dane dotyczą, masz prawo do:</p>
+      <ul>
+        <li><strong>dostępu</strong> do swoich danych (art. 15 RODO),</li>
+        <li><strong>sprostowania</strong> nieprawidłowych danych (art. 16),</li>
+        <li><strong>usunięcia</strong> danych („prawo do bycia zapomnianym", art. 17),</li>
+        <li><strong>ograniczenia przetwarzania</strong> (art. 18),</li>
+        <li><strong>przenoszenia danych</strong> (art. 20),</li>
+        <li><strong>sprzeciwu</strong> wobec przetwarzania (art. 21),</li>
+        <li>wniesienia <strong>skargi</strong> do Prezesa Urzędu Ochrony Danych Osobowych (ul. Stawki 2, 00-193 Warszawa, <a href="https://uodo.gov.pl" target="_blank" rel="noopener">uodo.gov.pl</a>).</li>
+      </ul>
+      <p>Żądania kieruj na adres: <a href="mailto:kat@reikihealing.pl">kat@reikihealing.pl</a>. Odpowiemy w ciągu 30 dni.</p>
+
+      <!-- §6 -->
+      <h2 id="bezpieczenstwo">6. Bezpieczeństwo danych</h2>
+      <p>Strona korzysta z szyfrowanego połączenia HTTPS (TLS). Dane przesyłane przez formularz rezerwacji trafiają bezpośrednio do administratora — nie są zapisywane na serwerze strony. Płatności realizowane są przez bezpieczne środowisko Przelewy24 (PCI DSS).</p>
+
+      <!-- §7 -->
+      <h2 id="zmiany">7. Zmiany polityki prywatności</h2>
+      <p>O istotnych zmianach polityki prywatności poinformujemy przez aktualizację tej strony z nową datą „Obowiązuje od". Zachęcamy do okresowego sprawdzania dokumentu.</p>
+
+      <!-- §8 -->
+      <h2 id="kontakt">8. Kontakt</h2>
+      <p>W razie pytań dotyczących prywatności napisz:</p>
+      <div class="info-box">
+        <p>E-mail: <a href="mailto:kat@reikihealing.pl">kat@reikihealing.pl</a><br>
+        Telefon / WhatsApp: <a href="tel:+48519389216">+48 519 389 216</a></p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer class="footer" aria-label="Stopka">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-name">Katarzyna Jaworska</div>
+        <div class="footer-tagline">Warszawa · Ciało i umysł w równowadze</div>
+      </div>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/lettinggoofadream/" class="footer-social" aria-label="Instagram" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+      </div>
+      <div class="footer-copy">© 2025 Katarzyna Jaworska Reiki</div>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Strona główna</a>
+      <a href="blog.html">Blog</a>
+      <a href="regulamin.html">Regulamin</a>
+      <a href="polityka-prywatnosci.html" class="active">Polityka prywatności</a>
+      <a href="index.html#booking">Umów wizytę</a>
+    </div>
+    <div class="footer-bottom">Sesje Reiki w Warszawie · Stworzone z troską</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('reset-consent').addEventListener('click', function () {
+  try { localStorage.removeItem('rh_cookie_consent'); } catch (e) {}
+  alert('Ustawienia cookies zostały zresetowane. Baner pojawi się przy następnej wizycie na stronie głównej.');
+});
+</script>
+<script src="cookie-banner.js"></script>
+</body>
+</html>
