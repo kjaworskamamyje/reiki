@@ -1,42 +1,46 @@
 """Tymczasowy endpoint diagnostyczny — USUŃ po naprawieniu płatności."""
 from http.server import BaseHTTPRequestHandler
-import json, os, hashlib, base64
+import json, os, base64, urllib.request, urllib.error
 
 class handler(BaseHTTPRequestHandler):
     def do_GET(self):
-        merchant_id = os.environ.get('P24_MERCHANT_ID', 'BRAK')
-        pos_id      = os.environ.get('P24_POS_ID', 'BRAK')
-        crc         = os.environ.get('P24_CRC', 'BRAK')
-        api_key     = os.environ.get('P24_API_KEY', 'BRAK')
-        sandbox     = os.environ.get('P24_SANDBOX', 'BRAK')
+        pos_id  = os.environ.get('P24_POS_ID', '')
+        api_key = os.environ.get('P24_API_KEY', '')
+        sandbox = os.environ.get('P24_SANDBOX', 'true').lower() != 'false'
+        base    = 'https://sandbox.przelewy24.pl' if sandbox else 'https://secure.przelewy24.pl'
 
-        def mask(v):
-            if v in ('BRAK', ''):
-                return v
-            s = str(v)
-            return s[:3] + '***' + s[-3:] if len(s) > 6 else '***'
-
-        # Sprawdź co idzie do Basic Auth
+        # Test połączenia z P24 /api/v1/testAccess
+        creds = base64.b64encode(f'{pos_id}:{api_key}'.encode()).decode()
+        req = urllib.request.Request(
+            base + '/api/v1/testAccess',
+            headers={'Authorization': f'Basic {creds}', 'Content-Type': 'application/json'},
+            method='GET',
+        )
         try:
-            pos_int = int(pos_id)
-        except:
-            pos_int = None
+            with urllib.request.urlopen(req, timeout=10) as r:
+                p24_response = json.loads(r.read())
+                p24_status = r.status
+        except urllib.error.HTTPError as e:
+            p24_response = e.read().decode('utf-8', errors='replace')
+            p24_status = e.code
+        except Exception as e:
+            p24_response = str(e)
+            p24_status = 0
 
-        creds_raw = f'{pos_id}:{api_key}'
-        creds_b64 = base64.b64encode(creds_raw.encode()).decode() if pos_id != 'BRAK' else 'BRAK'
-
-        info = {
-            'P24_MERCHANT_ID': mask(merchant_id),
-            'P24_POS_ID':      mask(pos_id),
-            'P24_CRC':         mask(crc),
-            'P24_API_KEY':     mask(api_key),
-            'P24_SANDBOX':     sandbox,
-            'pos_id_as_int':   pos_int,
-            'basic_auth_prefix': creds_b64[:20] + '...' if len(creds_b64) > 20 else creds_b64,
-            'sandbox_url': 'https://sandbox.przelewy24.pl' if sandbox != 'false' else 'https://secure.przelewy24.pl',
+        result = {
+            'env_vars_set': {
+                'P24_MERCHANT_ID': bool(os.environ.get('P24_MERCHANT_ID')),
+                'P24_POS_ID':      bool(pos_id),
+                'P24_CRC':         bool(os.environ.get('P24_CRC')),
+                'P24_API_KEY':     bool(api_key),
+                'P24_SANDBOX':     os.environ.get('P24_SANDBOX', 'NOT SET'),
+            },
+            'connecting_to': base,
+            'p24_test_status': p24_status,
+            'p24_test_response': p24_response,
         }
 
-        out = json.dumps(info, indent=2).encode()
+        out = json.dumps(result, indent=2).encode()
         self.send_response(200)
         self.send_header('Content-Type', 'application/json')
         self.send_header('Content-Length', str(len(out)))
